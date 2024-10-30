@@ -28,11 +28,10 @@ function App() {
     setTasks(newTasks);
   }
 
-  function onAddTaskSubmit(description, unit, unitPrice) {
+  function onAddTaskSubmit(description, unitPrice) {
     const newTask = {
       id: tasks.length + 1,
       description,
-      unit,
       unitPrice,
       isCompleted: false,
     };

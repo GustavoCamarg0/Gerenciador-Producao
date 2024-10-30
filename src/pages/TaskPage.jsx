@@ -7,7 +7,6 @@ function TaskPage() {
   const [searchParams] = useSearchParams();
   const description = searchParams.get("description");
   const unitPrice = searchParams.get("unitPrice");
-  const unit = searchParams.get("unit");
 
   return (
     <div className="h-screen w-screen bg-slate-500 p-6">
@@ -26,14 +25,12 @@ function TaskPage() {
             <thead>
               <tr>
                 <th className="border-b p-2 text-slate-600">Descrição</th>
-                <th className="border-b p-2 text-slate-600">Quantidade</th>
                 <th className="border-b p-2 text-slate-600">Preço Unitário</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td className="border-b p-2 text-slate-600">{description}</td>
-                <td className="border-b p-2 text-slate-600">{unit}</td>
                 <td className="border-b p-2 text-slate-600">R${unitPrice}</td>
               </tr>
             </tbody>

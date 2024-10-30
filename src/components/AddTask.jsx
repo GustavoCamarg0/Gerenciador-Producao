@@ -3,7 +3,6 @@ import Input from "./Input";
 
 function AddTask({ onAddTaskSubmit }) {
   const [description, setDescription] = useState("");
-  const [unit, setUnit] = useState("");
   const [unitPrice, setUnitPrice] = useState("");
 
   return (
@@ -16,14 +15,6 @@ function AddTask({ onAddTaskSubmit }) {
         onChange={(event) => setDescription(event.target.value)}
       />
 
-      <p className="text-slate-600 font-semibold">Quantidade a Produzir:</p>
-      <Input
-        type="number"
-        placeholder="Digite o número a ser produzido"
-        value={unit}
-        onChange={(event) => setUnit(event.target.value)}
-      />
-
       <p className="text-slate-600 font-semibold">Preço Unitário:</p>
       <Input
         type="number"
@@ -34,12 +25,11 @@ function AddTask({ onAddTaskSubmit }) {
 
       <button
         onClick={() => {
-          if (!description.trim() || !unit.trim() || !unitPrice.trim()) {
+          if (!description.trim() || !unitPrice.trim()) {
             return alert("Preencha os campos!");
           }
-          onAddTaskSubmit(description, unit, unitPrice);
+          onAddTaskSubmit(description, unitPrice);
           setDescription("");
-          setUnit("");
           setUnitPrice("");
         }}
         className="bg-slate-500 text-white pc-4 py-2 rounded-md"

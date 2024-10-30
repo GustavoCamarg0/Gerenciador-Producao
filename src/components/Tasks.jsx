@@ -7,8 +7,8 @@ function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
 
   function onSeeDetailsClick(task) {
     const query = new URLSearchParams();
+    console.log(task);
     query.set("description", task.description);
-    query.set("unit", task.unit);
     query.set("unitPrice", task.unitPrice);
 
     navigate(`/task?${query.toString()}`);
