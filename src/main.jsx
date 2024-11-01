@@ -8,7 +8,7 @@ import PrincipalPage from "./pages/PrincipalPage.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Cadastro-produto",
     element: <App />,
   },
   {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     element: <TaskPage />,
   },
   {
-    path: "/HomePage",
+    path: "/Home",
     element: <PrincipalPage />,
   },
 ]);
