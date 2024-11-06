@@ -1,16 +1,18 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import HeroSection from "../components/HeroSection";
-import ContentSection from "../components/ContentSection";
 import Footer from "../components/Footer";
+import { Sidebar } from "../components/Sidebar";
+import HeroSection from "../components/HeroSection";
 
 function PrincipalPage() {
   return (
-    <div className="w-screen h-screen bg-slate-500 flex flex-col items-center justify-between">
-      <Navbar />
-      <HeroSection />
-      <ContentSection />
-      <Footer />
+    <div className="h-screen flex flex-col ">
+      <div className="flex flex-1">
+        <Sidebar/>
+        <main className="flex-1">
+          <HeroSection/>
+          <Footer/>
+        </main>
+      </div>
     </div>
   );
 }
