@@ -5,6 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import TaskPage from "./pages/TaskPage.jsx";
 import PrincipalPage from "./pages/PrincipalPage.jsx";
+import { LoginPage } from "./pages/LoginPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,9 +17,13 @@ const router = createBrowserRouter([
     element: <TaskPage />,
   },
   {
-    path: "/Home",
+    path: "/home",
     element: <PrincipalPage />,
   },
+  {
+    path: "/",
+    element: <LoginPage />,
+  }
 ]);
 
 createRoot(document.getElementById("root")).render(
