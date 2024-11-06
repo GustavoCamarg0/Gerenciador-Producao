@@ -1,4 +1,10 @@
-import { DiamondPlus, SquarePlus, Menu } from "lucide-react";
+import {
+  DiamondPlus,
+  SquarePlus,
+  Menu,
+  LayoutDashboard,
+  ClipboardList,
+} from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -10,7 +16,7 @@ export function Sidebar() {
   return (
     <aside
       className={`border-r p-2 ${
-        isClose ? "w-16 close" : "w-52"
+        isClose ? "w-52" : "w-16 close"
       } flex flex-col transition-all ease-in-out duration-300`}
     >
       <div className="flex gap-3 items-center">
@@ -21,26 +27,39 @@ export function Sidebar() {
       </div>
 
       <ul className="flex flex-col gap-2 mt-[20%] w-full">
-        <li className="flex gap-4 cursor-pointer">
-          <DiamondPlus />
-          <Link to="/Cadastro-produto">
-            <span>Serviço 1</span>
-          </Link>
-        </li>
+        <Link to="/home">
+          <li className="flex gap-4 cursor-pointer">
+            <LayoutDashboard />
+
+            <span>Dashboard</span>
+          </li>
+        </Link>
         <hr className="mt-[10%]" />
-        <li className="flex gap-4 cursor-pointer">
-          <SquarePlus />
-          <Link to="">
-            <span>Serviço 2</span>
-          </Link>
-        </li>
+        <Link to="/Cadastro-produto">
+          <li className="flex gap-4 cursor-pointer">
+            <DiamondPlus />
+
+            <span>Cadastro de Peça</span>
+          </li>
+        </Link>
         <hr className="mt-[10%]" />
-        <li className="flex gap-4 cursor-pointer">
-          <SquarePlus />
-          <Link to="">
+
+        <Link to="/task">
+          <li className="flex gap-4 cursor-pointer">
+            <ClipboardList />
+            <span>Detalhes</span>
+          </li>
+        </Link>
+
+        <hr className="mt-[10%]" />
+
+        <Link to="/Cadastro-produto">
+          <li className="flex gap-4 cursor-pointer">
+            <SquarePlus />
+
             <span>Serviço 3</span>
-          </Link>
-        </li>
+          </li>
+        </Link>
       </ul>
     </aside>
   );
