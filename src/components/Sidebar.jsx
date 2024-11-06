@@ -17,11 +17,12 @@ export function Sidebar() {
     <aside
       className={`border-r p-2 ${
         isClose ? "w-52" : "w-16 close"
-      } flex flex-col transition-all ease-in-out duration-300`}
+      } flex flex-col transition-all ease-in-out duration-300 bg-white`}
     >
       <div className="flex gap-3 items-center">
-        <span className="text-sky-400 font-bold underline flex justify-center w-full text-2xl ">
-          VipPlast
+        <span className="font-bold underline flex justify-center w-full text-2xl ">
+          <p className="text-[#363949]">Vip</p>
+          <p className="text-sky-400 ">Plast</p>
         </span>
         <Menu className="cursor-pointer menu" onClick={toggleSidebar} />
       </div>

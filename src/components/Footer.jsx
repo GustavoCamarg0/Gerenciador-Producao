@@ -2,7 +2,7 @@ import { Instagram, Linkedin } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="w-full bg-slate-700/90 p-2 text-center text-white flex flex-col items-center gap-2 relative">
+    <footer className="w-full bg-[#27272a]/90 p-2 text-center text-white flex flex-col items-center gap-2 relative">
       <div className="flex gap-2 underline">
         <a href="#">Sobre</a>
         <a href="#">Contato</a>

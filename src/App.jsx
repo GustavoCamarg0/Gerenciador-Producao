@@ -43,9 +43,9 @@ function App() {
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">
         <Sidebar />
-        <main className="flex-1 bg-slate-700">
+        <main className="flex-1 bg-[#27272a]">
           <div className="flex justify-center h-full">
-            <div className="w-[500px] space-y-4">
+            <div className="w-[500px] space-y-4 mt-4">
               <Title> Cadastro de Peça </Title>
               <AddTask onAddTaskSubmit={onAddTaskSubmit} />
               <Tasks

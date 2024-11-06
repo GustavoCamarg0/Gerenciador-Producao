@@ -1,38 +1,37 @@
-import { Lock, Mail } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
+//bg-[#27272a]
 export function LoginPage() {
   return (
     <main className="bg-[#27272a] w-full h-screen flex justify-center items-center">
-      <div className="flex flex-col bg-white w-[400px] h-[500px] p-5 gap-2 items-center relative">
-        <h1 className="font-bold text-center text-3xl">LOGIN</h1>
-
-        <div className="bg-gray-800/10 w-80 h-[40px] flex items-center justify-center gap-2 p-1 mt-[15%]">
-          <Mail />
-          <input
-            type="text"
-            className="flex-1 outline-none bg-transparent h-full"
-            placeholder="Email"
-          />
+      <div className="w-[30%] h-[70%] bg-white rounded-lg flex flex-col items-center justify-between p-4">
+        <div className="flex flex-col items-center gap-3">
+          <span className="font-bold underline flex justify-center w-full text-2xl ">
+            <p className="text-[#363949]">Vip</p>
+            <p className="text-sky-400 ">Plast</p>
+          </span>
+          <h2 className="text-2xl font-bold text-[#363949]">LOGIN</h2>
         </div>
-        <div className="bg-gray-800/10 w-80 h-[40px] flex items-center justify-center gap-2 p-1">
-          <Lock />
-          <input
-            type="password"
-            className="flex-1 outline-none bg-transparent h-full"
-            placeholder="Password"
-          />
-        </div>
-        <a href="#" className="text-purple-500 underline text-sm mt-1">
-          Forgot password?
-        </a>
 
-        <Link
-          to={"/home"}
-          className="bg-sky-400 h-[30px] w-[90px] text-center p-1 text-white font-bold rounded mt-[15%]"
-        >
-          Sing in
-        </Link>
+        <div className="flex flex-col gap-2 w-full items-center">
+          <div className="w-[70%] ">
+            <Input type="email" placeholder="Email" />
+          </div>
+          <div className="w-[70%] flex">
+            <Input type="password" placeholder="Password" />
+          </div>
+          <a className="underline">Forgot password?</a>
+        </div>
+
+        <Button asChild className="w-[30%]">
+          <Link to="/home">Login</Link>
+        </Button>
+
+        <p>
+          Dont't have an accunt?
+          <span className="underline text-purple-500"> Sing up</span>
+        </p>
       </div>
     </main>
   );
