@@ -1,10 +1,24 @@
 import { useState } from "react";
 import Input from "./Input";
 import { Button } from "./ui/button";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function AddTask({ onAddTaskSubmit }) {
   const [description, setDescription] = useState("");
   const [unitPrice, setUnitPrice] = useState("");
+
+  const handleSaveClick = () => {
+    if (!description.trim() || !unitPrice.trim()) {
+      toast.error("Por favor, preencha todos os campos.");
+      return;
+    }
+    
+    onAddTaskSubmit(description, unitPrice);
+    toast.success("Tarefa adicionada com sucesso!");
+    setDescription("");
+    setUnitPrice("");
+  };
 
   return (
     <div className="w-[80%] flex flex-col p-2 justify-center items-center bg-white mt-3 rounded-md">
@@ -31,19 +45,13 @@ function AddTask({ onAddTaskSubmit }) {
       </div>
 
       <Button
-      className="w-[10%] mt-2"
-        onClick={() => {
-          if (!description.trim() || !unitPrice.trim()) {
-            return alert("Preencha os campos!");
-          }
-          onAddTaskSubmit(description, unitPrice);
-          setDescription("");
-          setUnitPrice("");
-        }}
+        className="w-[10%] mt-2 bg-blue-800 hover:bg-blue-800/90"
+        onClick={handleSaveClick}
       >
         Salvar
       </Button>
-      <hr />
+
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 }

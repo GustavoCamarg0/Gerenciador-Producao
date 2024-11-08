@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 //bg-[#27272a]
 export function LoginPage() {
   return (
-    <main className="bg-[#27272a] w-full h-screen flex justify-center items-center">
+    <main className="bg-gray-200 w-full h-screen flex justify-center items-center">
       <div className="w-[30%] h-[70%] bg-white rounded-lg flex flex-col items-center justify-between p-4">
         <div className="flex flex-col items-center gap-3">
           <span className="font-bold underline flex justify-center w-full text-2xl ">
@@ -18,7 +18,7 @@ export function LoginPage() {
           <div className="w-[70%] ">
             <Input type="email" placeholder="Email" />
           </div>
-          <div className="w-[70%] flex">
+          <div className="w-[70%]">
             <Input type="password" placeholder="Password" />
           </div>
           <a className="underline">Forgot password?</a>
