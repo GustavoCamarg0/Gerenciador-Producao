@@ -20,7 +20,7 @@ export function Sidebar() {
         isClose ? "w-52" : "w-16 close"
       } flex flex-col transition-all ease-in-out duration-300 bg-white`}
     >
-      <div className="flex-1 p-2">
+      <div className="flex-1 p-3">
         <div className="flex gap-3 items-center">
           <span className="font-bold underline flex justify-center w-full text-2xl ">
             <p className="text-[#363949]">Vip</p>
@@ -29,7 +29,7 @@ export function Sidebar() {
           <Menu className="cursor-pointer menu" onClick={toggleSidebar} />
         </div>
 
-        <ul className="flex flex-col gap-2 mt-[20%] w-full">
+        <ul className="flex flex-col gap-2 mt-12 w-full text-blue-500 pl-2">
           <Link to="/home">
             <li className="flex gap-4 cursor-pointer">
               <LayoutDashboard />
@@ -67,7 +67,7 @@ export function Sidebar() {
       </div>
 
       <Link to="/">
-        <div className="flex gap-2 text-red-400 w-full h-[72px] items-center justify-center">
+        <div className="flex gap-2 text-red-400 w-full h-[72px] items-center pl-5 logout">
           <LogOut />
          <span>Logout</span>
         </div>

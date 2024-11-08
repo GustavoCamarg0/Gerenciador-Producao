@@ -72,13 +72,21 @@
     }
 
     .close ul{
-      margin-top: 90%;
+      margin-top: 3rem;
       align-items: center;
-   
+      padding-left: 0;
+    }
+
+    .close .logout{
+      padding-left: 0;
     }
 
     .bg{
       background: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);
+    }
+    ul li span{
+      color: #363949;
+      font-weight: 400;
     }
   }
 }

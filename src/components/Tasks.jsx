@@ -1,6 +1,12 @@
-import { ChevronRightIcon, TrashIcon } from "lucide-react";
+import { ReceiptText, TrashIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import Button from "./Button";
+import { Button } from "./ui/button";
+
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
   const navigate = useNavigate();
@@ -14,29 +20,37 @@ function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
     navigate(`/task?${query.toString()}`);
   }
   return (
-    <ul className="space-y-4 p-6 bg-slate-200 rounded-md shadow">
+    <ul className="grid grid-cols-5 gap-10 mt-3 bg-white w-[80%] p-4 max-h-[256px] overflow-auto rounded-md">
       {tasks.map((task) => (
-        <li key={task.id} className="flex gap-2">
+        <li key={task.id} className="flex flex-col gap-2 items-center p-1">
           <button
             onClick={() => onTaskClick(task.id)}
-            className={`bg-slate-400 text-left w-full text-white p-2 rounded-md ${
+            className={`bg-blue-500 w-full text-white p-2 rounded-md text-center ${
               task.isCompleted && "line-through"
             }`}
           >
             {task.description}
           </button>
-          <Button
-            onClick={() => onSeeDetailsClick(task)}
-            className="bg-slate-400 p-2 rounded-md text-white"
-          >
-            <ChevronRightIcon />
-          </Button>
-          <Button
-            onClick={() => onDeleteTaskClick(task.id)}
-            className="bg-slate-400 p-2 rounded-md text-white"
-          >
-            <TrashIcon />
-          </Button>
+          <div className="flex gap-2">
+            <Popover>
+              <PopoverTrigger>
+                <Button className="bg-gray-500 hover:bg-gray-500/90">
+                  <ReceiptText />
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="flex flex-col">
+                <span>Descrição: {task.description}</span>
+                <span>Preço Unitário: R$ {task.unitPrice}</span>
+              </PopoverContent>
+            </Popover>
+
+            <Button
+              onClick={() => onDeleteTaskClick(task.id)}
+              variant={"destructive"}
+            >
+              <TrashIcon />
+            </Button>
+          </div>
         </li>
       ))}
     </ul>
