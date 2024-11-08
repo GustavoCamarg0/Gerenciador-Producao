@@ -15,7 +15,7 @@ function AddTask({ onAddTaskSubmit }) {
     }
     
     onAddTaskSubmit(description, unitPrice);
-    toast.success("Tarefa adicionada com sucesso!");
+    toast.success("Unidade adicionada com sucesso!");
     setDescription("");
     setUnitPrice("");
   };

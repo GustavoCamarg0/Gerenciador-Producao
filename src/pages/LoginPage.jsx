@@ -24,7 +24,7 @@ export function LoginPage() {
           <a className="underline">Forgot password?</a>
         </div>
 
-        <Button asChild className="w-[30%]">
+        <Button asChild className="w-[30%] bg-blue-800 hover:bg-blue-800/80">
           <Link to="/home">Login</Link>
         </Button>
 
