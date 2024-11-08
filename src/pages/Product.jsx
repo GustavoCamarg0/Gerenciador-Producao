@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import AddTask from "./components/AddTask";
-import Tasks from "./components/Tasks";
-import { Sidebar } from "./components/Sidebar";
-import Footer from "./components/Footer";
-import { Header } from "./components/Header";
+import AddTask from "../components/AddTask";
+import Tasks from "../components/Tasks";
+import { Sidebar } from "../components/Sidebar";
+import Footer from "../components/Footer";
+import { Header } from "../components/Header";
 
-function App() {
+export function Product() {
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("tasks")) || []
   );
@@ -47,7 +47,7 @@ function App() {
           <Header />
           <hr />
           <span className="w-full p-1 pl-4">
-            Home <span className="text-gray-400">/ Cadastro de Peça</span>
+            Home <span className="text-gray-400">/ Cadastro de Produto</span>
           </span>
           <div className="h-full bg-gray-200 w-full flex flex-col items-center">
             <AddTask onAddTaskSubmit={onAddTaskSubmit} />
@@ -66,4 +66,4 @@ function App() {
   );
 }
 
-export default App;
+

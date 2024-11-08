@@ -21,16 +21,16 @@ export function LoginPage() {
           <div className="w-[70%]">
             <Input type="password" placeholder="Password" />
           </div>
-          <a className="underline">Forgot password?</a>
+          <a className="underline cursor-pointer text-sm">Forgot password?</a>
         </div>
 
         <Button asChild className="w-[30%] bg-blue-800 hover:bg-blue-800/80">
           <Link to="/home">Login</Link>
         </Button>
 
-        <p>
+        <p className="text-sm">
           Dont't have an accunt?
-          <span className="underline text-purple-500"> Sing up</span>
+          <span className="underline text-purple-500 cursor-pointer"> Sing up</span>
         </p>
       </div>
     </main>

@@ -8,11 +8,11 @@ function HeroSection() {
           <h1 className="font-bold">26k</h1>
           <p>Peças</p>
         </div>
-        <div className="w-[220px] h-[120px] flex flex-col p-2 bg-blue-600 text-white rounded-md">
+        <div className="w-[220px] h-[120px] flex flex-col p-2 bg-amber-500 text-white rounded-md">
           <h1 className="font-bold">97</h1>
           <p>Vendas</p>
         </div>
-        <div className="w-[220px] h-[120px] flex flex-col p-2 bg-blue-700 text-white rounded-md">
+        <div className="w-[220px] h-[120px] flex flex-col p-2 bg-purple-500 text-white rounded-md">
           <h1 className="font-bold">4078 R$</h1>
           <p>Total</p>
         </div>

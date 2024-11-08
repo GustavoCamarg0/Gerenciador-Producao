@@ -1,10 +1,10 @@
 import {
   DiamondPlus,
-  SquarePlus,
   Menu,
   LayoutDashboard,
-  ClipboardList,
   LogOut,
+  RefreshCcwDot,
+  GitCompareArrows,
 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -29,38 +29,38 @@ export function Sidebar() {
           <Menu className="cursor-pointer menu" onClick={toggleSidebar} />
         </div>
 
-        <ul className="flex flex-col gap-2 mt-12 w-full text-blue-500 pl-2">
+        <ul className="flex flex-col gap-2 mt-12 w-full text-blue-500 pl-2 text-sm">
           <Link to="/home">
-            <li className="flex gap-4 cursor-pointer">
-              <LayoutDashboard />
+            <li className="flex gap-2 cursor-pointer">
+              <LayoutDashboard size={20}/>
 
               <span>Dashboard</span>
             </li>
           </Link>
           <hr className="mt-[10%]" />
-          <Link to="/Cadastro-produto">
-            <li className="flex gap-4 cursor-pointer">
-              <DiamondPlus />
+          <Link to="/product">
+            <li className="flex gap-2 cursor-pointer">
+              <DiamondPlus size={20} color="#f59e0b"/>
 
-              <span>Cadastro de Peça</span>
+              <span>Cadastro de Produto</span>
             </li>
           </Link>
           <hr className="mt-[10%]" />
 
-          <Link to="/task">
-            <li className="flex gap-4 cursor-pointer">
-              <ClipboardList />
-              <span>Detalhes</span>
+          <Link to="/process">
+            <li className="flex gap-2 cursor-pointer">
+              <GitCompareArrows size={20} color="#5b21b6"/>
+              
+              <span>Cadastro de Processo</span>
             </li>
           </Link>
 
           <hr className="mt-[10%]" />
 
-          <Link to="/Cadastro-produto">
-            <li className="flex gap-4 cursor-pointer">
-              <SquarePlus />
-
-              <span>Serviço 3</span>
+          <Link to="/production">
+            <li className="flex gap-2 cursor-pointer">
+              <RefreshCcwDot size={20} color="#06b6d4"/>
+              <span>Cadastro de Produção</span>
             </li>
           </Link>
         </ul>

@@ -1,16 +1,19 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import TaskPage from "./pages/TaskPage.jsx";
-import PrincipalPage from "./pages/PrincipalPage.jsx";
+import PrincipalPage from "./pages/Dashboard.jsx";
 import { LoginPage } from "./pages/LoginPage.jsx";
+import { Users } from "./pages/Users.jsx";
+import { Process } from "./pages/Process.jsx";
+import { Production } from "./pages/Production.jsx";
+import { Product } from "./pages/Product.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/Cadastro-produto",
-    element: <App />,
+    path: "/product",
+    element: <Product />,
   },
   {
     path: "/task",
@@ -23,6 +26,18 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <LoginPage />,
+  },
+  {
+    path: "/users",
+    element: <Users />,
+  },
+  {
+    path: "/process",
+    element: <Process />,
+  },
+  {
+    path: "/production",
+    element: <Production />,
   }
 ]);
 

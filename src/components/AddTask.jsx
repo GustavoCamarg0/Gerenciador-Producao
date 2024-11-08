@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Input from "./Input";
 import { Button } from "./ui/button";
+import { Input } from "@/components/ui/input";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -37,7 +37,7 @@ function AddTask({ onAddTaskSubmit }) {
           <p className="text-slate-600 font-semibold">Preço Unitário:</p>
           <Input
             type="number"
-            placeholder="Digite o preço unitário"
+            placeholder="R$ 0,00"
             value={unitPrice}
             onChange={(event) => setUnitPrice(event.target.value)}
           />
