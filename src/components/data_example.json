@@ -1,0 +1,344 @@
+[
+  {
+    "produto": "Café Gourmet Premium",
+    "quantidade": 3,
+    "valorUnidade": 75.50,
+    "valorTotal": 226.50
+  },
+  {
+    "produto": "Teclado Mecânico RGB",
+    "quantidade": 2,
+    "valorUnidade": 325.99,
+    "valorTotal": 651.98
+  },
+  {
+    "produto": "Caneta Tinteiro Elegante",
+    "quantidade": 12,
+    "valorUnidade": 22.75,
+    "valorTotal": 273.00
+  },
+  {
+    "produto": "Headset Gamer HyperSound",
+    "quantidade": 5,
+    "valorUnidade": 210.00,
+    "valorTotal": 1050.00
+  },
+  {
+    "produto": "Caderno Universitário",
+    "quantidade": 20,
+    "valorUnidade": 15.00,
+    "valorTotal": 300.00
+  },
+  {
+    "produto": "Garrafa Térmica 1L",
+    "quantidade": 6,
+    "valorUnidade": 85.90,
+    "valorTotal": 515.40
+  },
+  {
+    "produto": "Smartphone XZ Max",
+    "quantidade": 1,
+    "valorUnidade": 2899.99,
+    "valorTotal": 2899.99
+  },
+  {
+    "produto": "Livro de Programação Avançada",
+    "quantidade": 7,
+    "valorUnidade": 120.00,
+    "valorTotal": 840.00
+  },
+  {
+    "produto": "Mouse Sem Fio Pro",
+    "quantidade": 4,
+    "valorUnidade": 99.99,
+    "valorTotal": 399.96
+  },
+  {
+    "produto": "Tablet Zeta 10\"",
+    "quantidade": 2,
+    "valorUnidade": 1349.99,
+    "valorTotal": 2699.98
+  },
+  {
+    "produto": "Caneca Personalizada",
+    "quantidade": 15,
+    "valorUnidade": 30.00,
+    "valorTotal": 450.00
+  },
+  {
+    "produto": "Camiseta Estampada",
+    "quantidade": 10,
+    "valorUnidade": 45.00,
+    "valorTotal": 450.00
+  },
+  {
+    "produto": "Fone Bluetooth SoundPro",
+    "quantidade": 3,
+    "valorUnidade": 199.90,
+    "valorTotal": 599.70
+  },
+  {
+    "produto": "Caixa de Som Portátil",
+    "quantidade": 1,
+    "valorUnidade": 499.90,
+    "valorTotal": 499.90
+  },
+  {
+    "produto": "Óculos de Sol Polarizado",
+    "quantidade": 4,
+    "valorUnidade": 120.00,
+    "valorTotal": 480.00
+  },
+  {
+    "produto": "Luminária de Mesa LED",
+    "quantidade": 5,
+    "valorUnidade": 85.00,
+    "valorTotal": 425.00
+  },
+  {
+    "produto": "Caixa Organizadora",
+    "quantidade": 8,
+    "valorUnidade": 35.00,
+    "valorTotal": 280.00
+  },
+  {
+    "produto": "Mochila Executiva",
+    "quantidade": 2,
+    "valorUnidade": 149.99,
+    "valorTotal": 299.98
+  },
+  {
+    "produto": "Adaptador USB-C para HDMI",
+    "quantidade": 6,
+    "valorUnidade": 75.00,
+    "valorTotal": 450.00
+  },
+  {
+    "produto": "Carregador Rápido 20W",
+    "quantidade": 10,
+    "valorUnidade": 49.90,
+    "valorTotal": 499.00
+  },
+  {
+    "produto": "Relógio Esportivo",
+    "quantidade": 3,
+    "valorUnidade": 320.00,
+    "valorTotal": 960.00
+  },
+  {
+    "produto": "Smartwatch Fit Band",
+    "quantidade": 5,
+    "valorUnidade": 250.00,
+    "valorTotal": 1250.00
+  },
+  {
+    "produto": "Mini Drone Quadricóptero",
+    "quantidade": 2,
+    "valorUnidade": 425.00,
+    "valorTotal": 850.00
+  },
+  {
+    "produto": "Capinha para Smartphone",
+    "quantidade": 20,
+    "valorUnidade": 25.00,
+    "valorTotal": 500.00
+  },
+  {
+    "produto": "Cadeira de Escritório",
+    "quantidade": 1,
+    "valorUnidade": 750.00,
+    "valorTotal": 750.00
+  },
+  {
+    "produto": "Ventilador de Mesa",
+    "quantidade": 4,
+    "valorUnidade": 120.00,
+    "valorTotal": 480.00
+  },
+  {
+    "produto": "Chave de Fenda Multiuso",
+    "quantidade": 12,
+    "valorUnidade": 10.00,
+    "valorTotal": 120.00
+  },
+  {
+    "produto": "Aspirador de Pó Portátil",
+    "quantidade": 2,
+    "valorUnidade": 280.00,
+    "valorTotal": 560.00
+  },
+  {
+    "produto": "Jogo de Ferramentas",
+    "quantidade": 3,
+    "valorUnidade": 199.00,
+    "valorTotal": 597.00
+  },
+  {
+    "produto": "Impressora Multifuncional",
+    "quantidade": 1,
+    "valorUnidade": 879.99,
+    "valorTotal": 879.99
+  },
+  {
+    "produto": "Pasta Sanfonada",
+    "quantidade": 15,
+    "valorUnidade": 12.00,
+    "valorTotal": 180.00
+  },
+  {
+    "produto": "Câmera de Segurança Wi-Fi",
+    "quantidade": 2,
+    "valorUnidade": 249.90,
+    "valorTotal": 499.80
+  },
+  {
+    "produto": "Mochila para Notebook",
+    "quantidade": 5,
+    "valorUnidade": 99.99,
+    "valorTotal": 499.95
+  },
+  {
+    "produto": "Monitor Full HD 24\"",
+    "quantidade": 1,
+    "valorUnidade": 850.00,
+    "valorTotal": 850.00
+  },
+  {
+    "produto": "Cadeira Gamer",
+    "quantidade": 1,
+    "valorUnidade": 1499.90,
+    "valorTotal": 1499.90
+  },
+  {
+    "produto": "Filtro de Água",
+    "quantidade": 2,
+    "valorUnidade": 250.00,
+    "valorTotal": 500.00
+  },
+  {
+    "produto": "Caixa Organizadora Grande",
+    "quantidade": 4,
+    "valorUnidade": 60.00,
+    "valorTotal": 240.00
+  },
+  {
+    "produto": "Camiseta Polo",
+    "quantidade": 8,
+    "valorUnidade": 49.99,
+    "valorTotal": 399.92
+  },
+  {
+    "produto": "Mouse Pad XL",
+    "quantidade": 3,
+    "valorUnidade": 29.90,
+    "valorTotal": 89.70
+  },
+  {
+    "produto": "Garrafa Squeeze",
+    "quantidade": 25,
+    "valorUnidade": 12.00,
+    "valorTotal": 300.00
+  },
+  {
+    "produto": "Jogo de Panelas Antiaderente",
+    "quantidade": 1,
+    "valorUnidade": 299.99,
+    "valorTotal": 299.99
+  },
+  {
+    "produto": "Suporte para Monitor",
+    "quantidade": 4,
+    "valorUnidade": 85.00,
+    "valorTotal": 340.00
+  },
+  {
+    "produto": "Secador de Cabelo Pro",
+    "quantidade": 2,
+    "valorUnidade": 180.00,
+    "valorTotal": 360.00
+  },
+  {
+    "produto": "Copo de Vidro 300ml",
+    "quantidade": 30,
+    "valorUnidade": 8.50,
+    "valorTotal": 255.00
+  },
+  {
+    "produto": "Kit de Cabos USB",
+    "quantidade": 10,
+    "valorUnidade": 18.00,
+    "valorTotal": 180.00
+  },
+  {
+    "produto": "Papel Sulfite A4",
+    "quantidade": 5,
+    "valorUnidade": 30.00,
+    "valorTotal": 150.00
+  },
+  {
+    "produto": "Fritadeira Elétrica Air Fryer",
+    "quantidade": 1,
+    "valorUnidade": 499.99,
+    "valorTotal": 499.99
+  },
+  {
+    "produto": "Bolsa de Viagem",
+    "quantidade": 3,
+    "valorUnidade": 89.90,
+    "valorTotal": 269.70
+  },
+  {
+    "produto": "Par de Halteres 10kg",
+    "quantidade": 2,
+    "valorUnidade": 150.00,
+    "valorTotal": 300.00
+  },
+  {
+    "produto": "Copo Térmico",
+    "quantidade": 12,
+    "valorUnidade": 25.00,
+    "valorTotal": 300.00
+  },
+  {
+    "produto": "Lâmpada Inteligente Wi-Fi",
+    "quantidade": 4,
+    "valorUnidade": 59.90,
+    "valorTotal": 239.60
+  },
+  {
+    "produto": "Cabo HDMI 2m",
+    "quantidade": 8,
+    "valorUnidade": 15.00,
+    "valorTotal": 120.00
+  },
+  {
+    "produto": "Balança Digital Corporal",
+    "quantidade": 2,
+    "valorUnidade": 110.00,
+    "valorTotal": 220.00
+  },
+  {
+    "produto": "Mochila Escolar",
+    "quantidade": 10,
+    "valorUnidade": 70.00,
+    "valorTotal": 700.00
+  },
+  {
+    "produto": "Carteira de Couro",
+    "quantidade": 5,
+    "valorUnidade": 90.00,
+    "valorTotal": 450.00
+  },
+  {
+    "produto": "Capa de Chuva Compacta",
+    "quantidade": 15,
+    "valorUnidade": 22.00,
+    "valorTotal": 330.00
+  },
+  {
+    "produto": "Perfume Eau de Toilette",
+    "quantidade": 3,
+    "valorUnidade": 199.90,
+    "valorTotal": 599.70
+  }
+]

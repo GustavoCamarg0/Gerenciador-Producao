@@ -2,14 +2,21 @@ import React from "react";
 
 function HeroSection() {
   return (
-    <div className="w-full h-full bg-[#27272a] flex flex-col items-center text-center p-4">
-      <h2 className="text-3xl text-white font-bold">
-        Bem-vindo à nossa plataforma!
-      </h2>
-      <p className="text-white max-w-md">
-        Explore nossos serviços e descubra como podemos ajudar no
-        desenvolvimento das suas peças.
-      </p>
+    <div className="w-full flex flex-col items-center p-4">
+      <div className="w-full flex gap-10 justify-center">
+        <div className="w-[220px] h-[120px] flex flex-col p-2 bg-blue-500 text-white rounded-md">
+          <h1 className="font-bold">26k</h1>
+          <p>Peças</p>
+        </div>
+        <div className="w-[220px] h-[120px] flex flex-col p-2 bg-blue-600 text-white rounded-md">
+          <h1 className="font-bold">97</h1>
+          <p>Vendas</p>
+        </div>
+        <div className="w-[220px] h-[120px] flex flex-col p-2 bg-blue-700 text-white rounded-md">
+          <h1 className="font-bold">4078 R$</h1>
+          <p>Total</p>
+        </div>
+      </div>
     </div>
   );
 }
