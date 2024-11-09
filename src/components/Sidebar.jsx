@@ -5,6 +5,7 @@ import {
   LogOut,
   RefreshCcwDot,
   GitCompareArrows,
+  Grid2x2Check,
 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -32,7 +33,7 @@ export function Sidebar() {
         <ul className="flex flex-col gap-2 mt-12 w-full text-blue-500 pl-2 text-sm">
           <Link to="/home">
             <li className="flex gap-2 cursor-pointer">
-              <LayoutDashboard size={20}/>
+              <LayoutDashboard size={20} />
 
               <span>Dashboard</span>
             </li>
@@ -40,7 +41,7 @@ export function Sidebar() {
           <hr className="mt-[10%]" />
           <Link to="/product">
             <li className="flex gap-2 cursor-pointer">
-              <DiamondPlus size={20} color="#f59e0b"/>
+              <DiamondPlus size={20} color="#f59e0b" />
 
               <span>Cadastro de Produto</span>
             </li>
@@ -49,8 +50,8 @@ export function Sidebar() {
 
           <Link to="/process">
             <li className="flex gap-2 cursor-pointer">
-              <GitCompareArrows size={20} color="#5b21b6"/>
-              
+              <GitCompareArrows size={20} color="#5b21b6" />
+
               <span>Cadastro de Processo</span>
             </li>
           </Link>
@@ -59,8 +60,17 @@ export function Sidebar() {
 
           <Link to="/production">
             <li className="flex gap-2 cursor-pointer">
-              <RefreshCcwDot size={20} color="#06b6d4"/>
+              <RefreshCcwDot size={20} color="#06b6d4" />
               <span>Cadastro de Produção</span>
+            </li>
+          </Link>
+
+          <hr className="mt-[10%]" />
+
+          <Link to="/dashproduct">
+            <li className="flex gap-2 cursor-pointer">
+              <Grid2x2Check size={20} color="#22c55e" />
+              <span>Produção</span>
             </li>
           </Link>
         </ul>
@@ -69,7 +79,7 @@ export function Sidebar() {
       <Link to="/">
         <div className="flex gap-2 text-red-400 w-full h-[72px] items-center pl-5 logout">
           <LogOut />
-         <span>Logout</span>
+          <span>Logout</span>
         </div>
       </Link>
     </aside>

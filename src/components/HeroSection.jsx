@@ -1,22 +1,35 @@
+import { ArchiveRestore, Box, DollarSign } from "lucide-react";
 import React from "react";
+import { Card } from "./Card";
 
 function HeroSection() {
   return (
-    <div className="w-full flex flex-col items-center p-4">
-      <div className="w-full flex gap-10 justify-center">
-        <div className="w-[220px] h-[120px] flex flex-col p-2 bg-blue-500 text-white rounded-md">
-          <h1 className="font-bold">26k</h1>
-          <p>Peças</p>
-        </div>
-        <div className="w-[220px] h-[120px] flex flex-col p-2 bg-amber-500 text-white rounded-md">
-          <h1 className="font-bold">97</h1>
-          <p>Vendas</p>
-        </div>
-        <div className="w-[220px] h-[120px] flex flex-col p-2 bg-purple-500 text-white rounded-md">
-          <h1 className="font-bold">4078 R$</h1>
-          <p>Total</p>
-        </div>
+    <div className="bg-white w-[90%] h-[30%] mt-3 rounded-md flex flex-col">
+      <h1 className="w-full p-1 pl-2 text-gray-500 font-normal">Overview</h1>
+      <hr />
+
+      <div className="flex justify-around items-center p-3">
+        <Card
+          icon={<Box size={20} className="text-white" />}
+          bg="bg-blue-500"
+          text="Numero de Produtos"
+          value="87"
+        />
+        <Card
+          icon={<ArchiveRestore size={20} className="text-white" />}
+          bg="bg-purple-500"
+          text="Qnt de Produtos"
+          value="3.957"
+        />
+        <Card
+          icon={<DollarSign size={20} className="text-white" />}
+          bg="bg-emerald-500"
+          text="Valor Total"
+          value="344.259"
+        />
       </div>
+
+      <hr />
     </div>
   );
 }

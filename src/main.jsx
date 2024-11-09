@@ -4,9 +4,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./pages/Dashboard.jsx";
 import { LoginPage } from "./pages/LoginPage.jsx";
 import { Users } from "./pages/Users.jsx";
-import { Process } from "./pages/Process.jsx";
-import { Production } from "./pages/Production.jsx";
-import { Product } from "./pages/Product.jsx";
+import { AddProcess } from "./pages/AddProcess.jsx";
+import { AddProduction } from "./pages/AddProduction.jsx";
+import { AddProduct } from "./pages/AddProduct.jsx";
+import {DashProduct} from "./pages/DashProduct.jsx";
 
 import "./index.css";
 const router = createBrowserRouter([
@@ -20,19 +21,23 @@ const router = createBrowserRouter([
   },
   {
     path: "/product",
-    element: <Product />,
+    element: <AddProduct />,
   },
   {
     path: "/process",
-    element: <Process />,
+    element: <AddProcess />,
   },
   {
     path: "/production",
-    element: <Production />,
+    element: <AddProduction />,
   },
   {
     path: "/users",
     element: <Users />,
+  },
+  {
+    path: "/dashproduct",
+    element: <DashProduct />,
   }
 ]);
 

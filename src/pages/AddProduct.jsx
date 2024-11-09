@@ -5,7 +5,7 @@ import { Sidebar } from "../components/Sidebar";
 import Footer from "../components/Footer";
 import { Header } from "../components/Header";
 
-export function Product() {
+export function AddProduct() {
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("tasks")) || []
   );
