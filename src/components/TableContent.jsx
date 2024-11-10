@@ -10,7 +10,6 @@ import {
 import data from "./data_example.json";
 
 export function TableContent() {
-  console.log(data);
   return (
     <div className="bg-white w-[90%] rounded max-h-[300px]  overflow-auto">
       <Table >

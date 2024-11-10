@@ -25,7 +25,7 @@ function HeroSection() {
           icon={<DollarSign size={20} className="text-white" />}
           bg="bg-emerald-500"
           text="Valor Total"
-          value="344.259"
+          value="R$ 344.259"
         />
       </div>
 

@@ -33,7 +33,7 @@ export function Sidebar() {
         <ul className="flex flex-col gap-2 mt-12 w-full text-blue-500 pl-2 text-sm">
           <Link to="/home">
             <li className="flex gap-2 cursor-pointer">
-              <LayoutDashboard size={20} />
+              <LayoutDashboard size={20} className="text-blue-500"/>
 
               <span>Dashboard</span>
             </li>
@@ -41,7 +41,7 @@ export function Sidebar() {
           <hr className="mt-[10%]" />
           <Link to="/product">
             <li className="flex gap-2 cursor-pointer">
-              <DiamondPlus size={20} color="#f59e0b" />
+              <DiamondPlus size={20} className="text-amber-500" />
 
               <span>Cadastro de Produto</span>
             </li>
@@ -50,7 +50,7 @@ export function Sidebar() {
 
           <Link to="/process">
             <li className="flex gap-2 cursor-pointer">
-              <GitCompareArrows size={20} color="#5b21b6" />
+              <GitCompareArrows size={20} className="text-purple-500" />
 
               <span>Cadastro de Processo</span>
             </li>
@@ -60,7 +60,7 @@ export function Sidebar() {
 
           <Link to="/production">
             <li className="flex gap-2 cursor-pointer">
-              <RefreshCcwDot size={20} color="#06b6d4" />
+              <RefreshCcwDot size={20} className="text-emerald-500" />
               <span>Cadastro de Produção</span>
             </li>
           </Link>
@@ -69,7 +69,7 @@ export function Sidebar() {
 
           <Link to="/dashproduct">
             <li className="flex gap-2 cursor-pointer">
-              <Grid2x2Check size={20} color="#22c55e" />
+              <Grid2x2Check size={20} className="text-slate-500" />
               <span>Produção</span>
             </li>
           </Link>
