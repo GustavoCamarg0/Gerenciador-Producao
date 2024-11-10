@@ -23,9 +23,10 @@ import {
 interface ComboboxDemoProps<T> {
   data: T[];
   displayKey: keyof T; // Chave que será usada para exibição
+  onSelectionChange?: (selectedItem: T | null) => void; // Função de callback para mudança de seleção
 }
 
-export function ComboboxDemo<T extends object>({ data, displayKey }: ComboboxDemoProps<T>) {
+export function ComboboxDemo<T extends object>({ data, displayKey, onSelectionChange }: ComboboxDemoProps<T>) {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
 
@@ -57,6 +58,11 @@ export function ComboboxDemo<T extends object>({ data, displayKey }: ComboboxDem
                   onSelect={(currentValue) => {
                     setValue(currentValue === value ? "" : currentValue);
                     setOpen(false);
+                    
+                    if (onSelectionChange) {
+                      const selectedItem = data.find((i) => i[displayKey] === currentValue) || null;
+                      onSelectionChange(selectedItem); 
+                    }
                   }}
                 >
                   {item[displayKey] as string}
