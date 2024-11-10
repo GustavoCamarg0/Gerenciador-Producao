@@ -2,7 +2,10 @@ import Footer from "../components/Footer";
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 
-export function AddProduction () {
+import {ComboboxDemo} from"../components/ui/combobox"
+
+import data from "../components/data_example.json";
+export function AddProduction() {
   return (
     <div className="h-screen flex flex-col ">
       <div className="flex flex-1">
@@ -15,6 +18,7 @@ export function AddProduction () {
           </span>
           <hr />
           <div className="h-full bg-gray-200 w-full flex flex-col items-center">
+            <ComboboxDemo data={data} displayKey="produto"/>
           </div>
           <Footer />
         </main>
