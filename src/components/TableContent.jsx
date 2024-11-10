@@ -10,9 +10,15 @@ import {
 import data from "./data_example.json";
 
 export function TableContent() {
+  const resolutions = `
+  lg:max-h-[280px]
+  2xl:max-h-[700px]
+  `;
   return (
-    <div className="bg-white w-[90%] rounded max-h-[300px]  overflow-auto">
-      <Table >
+    <div
+      className={`bg-white w-[90%] flex-1 h-full overflow-auto ${resolutions}`}
+    >
+      <Table>
         <TableHeader>
           <TableRow>
             <TableHead>Produto</TableHead>

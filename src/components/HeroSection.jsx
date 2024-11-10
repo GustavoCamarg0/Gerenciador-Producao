@@ -4,7 +4,7 @@ import { Card } from "./Card";
 
 function HeroSection() {
   return (
-    <div className="bg-white w-[90%] h-[30%] mt-3 rounded-md flex flex-col">
+    <div className="bg-white w-[90%] h-36 mt-3 rounded-md flex flex-col relative">
       <h1 className="w-full p-1 pl-2 text-gray-500 font-normal">Overview</h1>
       <hr />
 
@@ -29,7 +29,7 @@ function HeroSection() {
         />
       </div>
 
-      <hr />
+      <hr className=""/>
     </div>
   );
 }

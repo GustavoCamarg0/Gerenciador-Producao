@@ -9,6 +9,11 @@ import {
 } from "@/components/ui/popover";
 
 function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
+  const resolutions = `
+  lg:max-h-[256px]
+  2xl:max-h-[750px]
+  `;
+  
   const navigate = useNavigate();
 
   function onSeeDetailsClick(task) {
@@ -20,12 +25,12 @@ function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
     navigate(`/task?${query.toString()}`);
   }
   return (
-    <ul className="grid grid-cols-5 gap-10 mt-3 bg-white w-[80%] p-4 max-h-[256px] overflow-auto rounded-md ">
+    <ul className={`grid grid-cols-5 gap-10 mt-3 bg-white w-[80%] p-4 overflow-auto rounded-md ${resolutions}`}>
       {tasks.map((task) => (
         <li key={task.id} className="flex flex-col gap-2 items-center p-1 bg-gray-950/10 rounded-md justify-between">
           <button
             onClick={() => onTaskClick(task.id)}
-            className={`bg-blue-500 w-full text-white p-2 rounded-md text-center flex-1 ${
+            className={`bg-blue-500 w-full text-white p-2 rounded-md text-center flex-1 text-xs ${
               task.isCompleted && "line-through"
             }`}
           >
