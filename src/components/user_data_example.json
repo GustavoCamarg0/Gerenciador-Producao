@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "nome": "Aurora Lins",
+    "cpf": "123.456.789-10",
+    "login": "aurora_sunshine",
+    "senha": "C0mpL3x@2024!"
+  },
+  {
+    "id": 2,
+    "nome": "Felipe Rocha",
+    "cpf": "987.654.321-00",
+    "login": "felipe_rocker",
+    "senha": "F3l!p3@R#123"
+  },
+  {
+    "id": 3,
+    "nome": "Gustavo Almeida",
+    "cpf": "111.222.333-44",
+    "login": "gust_almeida",
+    "senha": "G@st_7uD0_9"
+  },
+  {
+    "id": 4,
+    "nome": "Juliana Santana",
+    "cpf": "555.888.777-22",
+    "login": "ju_santana11",
+    "senha": "J!u@S_12#2022"
+  },
+  {
+    "id": 5,
+    "nome": "Vinícius Pereira",
+    "cpf": "333.444.555-66",
+    "login": "vini1234",
+    "senha": "V!nI123*P@r"
+  },
+  {
+    "id": 6,
+    "nome": "Clara Duarte",
+    "cpf": "777.666.555-88",
+    "login": "clara_darkwave",
+    "senha": "Cl@r@_W4vE_67"
+  },
+  {
+    "id": 7,
+    "nome": "Rodrigo Neves",
+    "cpf": "444.555.666-77",
+    "login": "rodrigo_n7",
+    "senha": "R0dr!g0_@neves"
+  },
+  {
+    "id": 8,
+    "nome": "Larissa Coutinho",
+    "cpf": "222.111.333-99",
+    "login": "lari_cout",
+    "senha": "L@ri$2023pass"
+  },
+  {
+    "id": 9,
+    "nome": "Bruno Santiago",
+    "cpf": "666.777.888-11",
+    "login": "bruno_sgt",
+    "senha": "B!un05#secR"
+  },
+  {
+    "id": 10,
+    "nome": "Mariana Silva",
+    "cpf": "999.000.111-22",
+    "login": "marianasil_22",
+    "senha": "M@riSilv@2022"
+  },
+  {
+    "id": 11,
+    "nome": "Diego Costa",
+    "cpf": "123.789.456-30",
+    "login": "diegcosta",
+    "senha": "DiegO_Pa$$01"
+  },
+  {
+    "id": 12,
+    "nome": "Sofia Nogueira",
+    "cpf": "321.654.987-40",
+    "login": "sofia.ngr",
+    "senha": "S0f!@Luv34"
+  },
+  {
+    "id": 13,
+    "nome": "Ricardo Souza",
+    "cpf": "555.222.444-55",
+    "login": "ric_souza_90",
+    "senha": "RiCar#09$S"
+  },
+  {
+    "id": 14,
+    "nome": "Alice Freitas",
+    "cpf": "888.111.222-33",
+    "login": "alice_fre",
+    "senha": "AlicFre!@123"
+  },
+  {
+    "id": 15,
+    "nome": "Henrique Mendes",
+    "cpf": "112.233.445-56",
+    "login": "henri_mds",
+    "senha": "H@M3n#2023"
+  },
+  {
+    "id": 16,
+    "nome": "Camila Ribeiro",
+    "cpf": "778.899.001-44",
+    "login": "cami_rib",
+    "senha": "C@m!R#b0"
+  },
+  {
+    "id": 17,
+    "nome": "Pedro Oliveira",
+    "cpf": "333.111.444-99",
+    "login": "pedrolive",
+    "senha": "P3dro@LvR2021"
+  },
+  {
+    "id": 18,
+    "nome": "Laura Martins",
+    "cpf": "222.333.555-11",
+    "login": "lauramrt",
+    "senha": "L@m@rts01!"
+  },
+  {
+    "id": 19,
+    "nome": "André Carvalho",
+    "cpf": "999.888.777-66",
+    "login": "andre_crvh",
+    "senha": "AnD#v2023"
+  },
+  {
+    "id": 20,
+    "nome": "Renata Luz",
+    "cpf": "666.555.444-22",
+    "login": "renatalz",
+    "senha": "R#na_L!z12"
+  }
+]
