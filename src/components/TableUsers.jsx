@@ -19,7 +19,7 @@ export function TableUsers() {
   `;
   
   return (
-    <div className={`bg-white h-full overflow-auto p-2  ${resolutions}`}>
+    <div className={`bg-white h-full overflow-auto p-2 rounded-b-md  ${resolutions}`}>
       <Table className="border">
         <TableHeader>
           <TableRow className="bg-gray-300/90  hover:bg-gray-300/90">

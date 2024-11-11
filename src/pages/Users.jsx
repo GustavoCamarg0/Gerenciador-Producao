@@ -27,7 +27,7 @@ export function Users() {
           <hr />
           <div className="h-full bg-gray-200 w-full flex justify-center p-8 gap-8">
             <div className="flex-1">
-              <div className="bg-white w-full h-[50px] flex gap-2 items-center pl-3 pr-6">
+              <div className="bg-white w-full h-[50px] flex gap-2 items-center pl-3 pr-6 rounded-t-md">
                 <h1 className="text-lg font-medium">Lista de Usuarios</h1>
                 <Dialog>
                   <DialogTrigger>
