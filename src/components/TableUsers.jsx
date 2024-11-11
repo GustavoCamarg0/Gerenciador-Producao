@@ -14,15 +14,15 @@ import { FilePenLine, Trash2 } from "lucide-react";
 
 export function TableUsers() {
   const resolutions = `
-  lg:max-h-[400px]
+  lg:max-h-[350px]
   2xl:max-h-[700px]
   `;
   
   return (
-    <div className={`bg-white h-full overflow-auto rounded-md flex-1 ${resolutions}`}>
-      <Table>
+    <div className={`bg-white h-full overflow-auto p-2  ${resolutions}`}>
+      <Table className="border">
         <TableHeader>
-          <TableRow>
+          <TableRow className="bg-gray-300/90  hover:bg-gray-300/90">
             <TableHead>Nome</TableHead>
             <TableHead>CPF</TableHead>
             <TableHead>Login</TableHead>
@@ -37,7 +37,7 @@ export function TableUsers() {
               <TableCell>{item.login}</TableCell>
               <TableCell>
                 <div className="flex gap-2">
-                  <Button className="bg-blue-800 hover:bg-blue-800/80"><FilePenLine /></Button>
+                  <Button className="bg-emerald-500 hover:bg-emerald-500/80"><FilePenLine /></Button>
                   <Button variant={"destructive"}><Trash2 /></Button>
                 </div>
               </TableCell>

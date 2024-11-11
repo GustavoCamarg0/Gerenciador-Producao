@@ -1,9 +1,18 @@
+import { Plus, Search } from "lucide-react";
 import Footer from "../components/Footer";
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 import { TableUsers } from "../components/TableUsers";
-import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
+import { UserForm } from "../components/UserForm";
+import { Input } from "../components/ui/input";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { DialogTitle } from "@radix-ui/react-dialog";
 export function Users() {
   return (
     <div className="h-screen flex flex-col ">
@@ -16,30 +25,47 @@ export function Users() {
             Home <span className="text-gray-400">/ Users</span>
           </span>
           <hr />
-          <div className="h-full bg-gray-200 w-full flex items-center p-8 gap-8">
-            <div className="bg-white h-auto p-4 rounded-md flex flex-col gap-2 items-center flex-1">
-              <div className="w-[50%]">
-                <p>Nome do Usuario:</p>
-                <Input placeholder="Digite o Nome..." />
+          <div className="h-full bg-gray-200 w-full flex justify-center p-8 gap-8">
+            <div className="flex-1">
+              <div className="bg-white w-full h-[50px] flex gap-2 items-center pl-3 pr-6">
+                <h1 className="text-lg font-medium">Lista de Usuarios</h1>
+                <Dialog>
+                  <DialogTrigger>
+                    <Button className="bg-blue-800 hover:bg-blue-800/80">
+                      <Plus />
+                      Adicionar Usuario
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="p-0 w-96 top-[40%]">
+                    <DialogHeader>
+                      <DialogTitle className="p-2 text-lg text-gray-500">
+                        Adicionar Novo Usuário
+                      </DialogTitle>
+                      <hr />
+                      <UserForm />
+                      <hr />
+                      <div className="w-full flex justify-end mt-5 p-2">
+                        <Button className="bg-blue-800 hover:bg-blue-800/80">
+                          Salvar
+                        </Button>
+                      </div>
+                    </DialogHeader>
+                  </DialogContent>
+                </Dialog>
+                <div className="flex flex-1 justify-end">
+                  <Input
+                    className="w-60 rounded-none border-r-0 rounded-s-md focus-visible:ring-0"
+                    placeholder="Informe o Nome do Usuario"
+                    type="search"
+                  />
+                  <div className="border p-1 rounded-e-md border-l-0">
+                    <Search size={25} className="text-gray-500" />
+                  </div>
+                </div>
               </div>
-              <div className="w-[50%]">
-                <p>CPF:</p>
-                <Input placeholder="Informe o CPF..." />
-              </div>
-              <div className="w-[50%]">
-                <p>Login:</p>
-                <Input placeholder="Digite o Login..." />
-              </div>
-              <div className="w-[50%]">
-                <p>Senha:</p>
-                <Input placeholder="Informe a Senha..." />
-              </div>
-
-              <Button className="bg-blue-800 hover:bg-blue-800/80 mt-3">
-                Salvar
-              </Button>
+              <hr />
+              <TableUsers />
             </div>
-            <TableUsers />
           </div>
           <Footer />
         </main>
