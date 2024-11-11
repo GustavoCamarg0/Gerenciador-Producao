@@ -37,21 +37,10 @@ export function Users() {
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="p-0 w-96 top-[40%]">
-                    <DialogHeader>
-                      <DialogTitle className="p-2 text-lg text-gray-500">
-                        Adicionar Novo Usuário
-                      </DialogTitle>
-                      <hr />
-                      <UserForm />
-                      <hr />
-                      <div className="w-full flex justify-end mt-5 p-2">
-                        <Button className="bg-blue-800 hover:bg-blue-800/80">
-                          Salvar
-                        </Button>
-                      </div>
-                    </DialogHeader>
+                    <UserForm />
                   </DialogContent>
                 </Dialog>
+
                 <div className="flex flex-1 justify-end">
                   <Input
                     className="w-60 rounded-none border-r-0 rounded-s-md focus-visible:ring-0"
@@ -63,7 +52,9 @@ export function Users() {
                   </div>
                 </div>
               </div>
+
               <hr />
+
               <TableUsers />
             </div>
           </div>

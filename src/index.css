@@ -89,5 +89,9 @@
       color: #363949;
       font-weight: 400;
     }
+
+    .form div{
+      width: 60%;
+    }
   }
 }
