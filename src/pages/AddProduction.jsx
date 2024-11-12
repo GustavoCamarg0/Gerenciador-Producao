@@ -4,7 +4,7 @@ import { Sidebar } from "../components/Sidebar";
 import { ComboboxDemo } from "../components/ui/combobox";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
-import data from "../components/data_example.json";
+import data from "../JSONs/data_example.json";
 import { useState } from "react";
 
 export function AddProduction() {
@@ -40,9 +40,9 @@ export function AddProduction() {
           <hr />
 
           <div className="h-full bg-gray-200 w-full flex flex-col items-center">
-            <div className="bg-white w-[70%] flex flex-col p-4 mt-5 rounded-md gap-5 items-center text-sm">
+            <div className="bg-white w-[55%] flex flex-col mt-5 rounded-md gap-5 items-center text-sm">
               <div className="flex w-full gap-5 justify-center mt-5">
-                <div className="w-[30%]">
+                <div className="w-56">
                   <span>Escolha o Produto:</span>
                   <ComboboxDemo
                     data={data}
@@ -50,7 +50,7 @@ export function AddProduction() {
                     onSelectionChange={setPriceSelect}
                   />
                 </div>
-                <div className="w-[30%]">
+                <div className="w-56">
                   <span>Valor Unitário:</span>
                   <Input
                     type="text"
@@ -62,7 +62,7 @@ export function AddProduction() {
               </div>
 
               <div className="w-full flex gap-5 justify-center">
-                <div className="w-[30%]">
+                <div className="w-56">
                   <span>Quantidade:</span>
                   <Input
                     type="number"
@@ -71,7 +71,7 @@ export function AddProduction() {
                     placeholder="Informe a Quantidade"
                   />
                 </div>
-                <div className="w-[30%]">
+                <div className="w-56">
                   <span>Valor Total:</span>
                   <Input
                     type="text"
@@ -83,17 +83,17 @@ export function AddProduction() {
               </div>
 
               <div className="w-full flex gap-5 justify-center">
-                <div className="w-[30%]">
-                  <span>Data de Entrada:</span>
+                <div className="w-56">
+                  <span>Data de Inicio:</span>
                   <Input type="date" />
                 </div>
-                <div className="w-[30%]">
-                  <span>Data de Saida:</span>
+                <div className="w-56">
+                  <span>Data de Entrega:</span>
                   <Input type="date" />
                 </div>
               </div>
 
-              <Button className="bg-blue-800 w-[20%] mt-5 hover:bg-blue-800/80">Salvar</Button>
+              <Button className="bg-blue-800 w-[20%] mb-2 hover:bg-blue-800/80">Salvar</Button>
             </div>
           </div>
           <Footer />

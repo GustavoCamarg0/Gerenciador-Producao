@@ -2,7 +2,7 @@ import Footer from "../components/Footer";
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 
-import data from "../components/data_example.json";
+import data from "../JSONs/data_example.json";
 import { Button } from "../components/ui/button";
 import { ComboboxDemo } from "../components/ui/combobox";
 import { Input } from "../components/ui/input";

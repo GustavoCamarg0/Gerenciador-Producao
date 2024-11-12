@@ -5,21 +5,12 @@ import { Sidebar } from "../components/Sidebar";
 import Footer from "../components/Footer";
 import { Header } from "../components/Header";
 
+import data from "../JSONs/Products_Process_Example.json"
+
 export function AddProduct() {
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("tasks")) || []
   );
-
-  function onTaskClick(taskId) {
-    const newTasks = tasks.map((task) => {
-      if (task.id == taskId) {
-        return { ...task, isCompleted: !task.isCompleted };
-      }
-
-      return task;
-    });
-    setTasks(newTasks);
-  }
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -40,7 +31,6 @@ export function AddProduct() {
     setTasks([...tasks, newTask]);
   }
 
-  
   return (
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">
@@ -53,10 +43,10 @@ export function AddProduct() {
           </span>
           <div className="h-full bg-gray-200 w-full flex flex-col items-center">
             <AddTask onAddTaskSubmit={onAddTaskSubmit} />
+            <hr />
             {tasks.length > 0 ? (
               <Tasks
                 tasks={tasks}
-                onTaskClick={onTaskClick}
                 onDeleteTaskClick={onDeleteTaskClick}
               />
             ) : null}

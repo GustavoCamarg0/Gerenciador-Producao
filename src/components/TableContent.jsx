@@ -7,7 +7,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import data from "./data_example.json";
+
+import data from "../JSONs/data_example.json";
 
 export function TableContent() {
   const resolutions = `

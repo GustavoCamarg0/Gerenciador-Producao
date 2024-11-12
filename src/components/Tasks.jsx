@@ -1,53 +1,61 @@
 import { ReceiptText, TrashIcon } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
 
 import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { TableProcess } from "./TableProcess";
 
-function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
+function Tasks({ tasks, onDeleteTaskClick }) {
   const resolutions = `
-  lg:max-h-[256px]
-  2xl:max-h-[750px]
+  lg:max-h-80
+  2xl:max-h-[80%]
   `;
-  
-  const navigate = useNavigate();
 
-  function onSeeDetailsClick(task) {
-    const query = new URLSearchParams();
-    console.log(task);
-    query.set("description", task.description);
-    query.set("unitPrice", task.unitPrice);
-
-    navigate(`/task?${query.toString()}`);
-  }
   return (
-    <ul className={`grid grid-cols-5 gap-10 mt-3 bg-white w-[80%] p-4 overflow-auto rounded-md ${resolutions}`}>
+    <ul
+      className={`grid grid-cols-5 gap-10 bg-white w-[80%] p-4 overflow-auto ${resolutions}`}
+    >
       {tasks.map((task) => (
-        <li key={task.id} className="flex flex-col gap-2 items-center p-1 bg-gray-950/10 rounded-md justify-between">
-          <button
-            onClick={() => onTaskClick(task.id)}
-            className={`bg-blue-500 w-full text-white p-2 rounded-md text-center flex-1 text-xs ${
-              task.isCompleted && "line-through"
-            }`}
-          >
+        <li
+          key={task.id}
+          className="flex flex-col gap-2 items-center p-1 bg-gray-950/10 rounded-md justify-between"
+        >
+          <span className="bg-blue-800 w-full text-white p-2 rounded-md flex-1 text-xs text-center font-semibold flex justify-center items-center">
             {task.description}
-          </button>
-          <div className="flex gap-2">
-            <Popover>
-              <PopoverTrigger>
-                <Button className="bg-gray-500 hover:bg-gray-500/90">
+          </span>
+          <div className="flex gap-2 w-full justify-around">
+            <Dialog>
+              <DialogTrigger>
+                <Button className="bg-emerald-500 hover:bg-emerald-500/80">
                   <ReceiptText />
                 </Button>
-              </PopoverTrigger>
-              <PopoverContent className="flex flex-col">
-                <span>Descrição: {task.description}</span>
-                <span>Preço Unitário: R$ {task.unitPrice}</span>
-              </PopoverContent>
-            </Popover>
+              </DialogTrigger>
+              <DialogContent className="p-0 top-[40%]">
+                <DialogTitle hidden></DialogTitle>
+                <div className="p-0 flex flex-col gap-2 text-sm">
+                  <div className="p-4 text-lg text-gray-400">
+                    <h1>{task.description} - Descrição</h1>
+                  </div>
+                  <hr />
+
+                  <div className="flex flex-col gap-2 p-4">
+                    <span>
+                      Preço Unitário:{" "}
+                      <span className="text-green-600 font-medium">
+                        R$ {task.valorUnitario}
+                      </span>
+                    </span>
+                    {
+                      task.processos ? (<TableProcess processos={task.processos} />):""
+                    }
+                  </div>
+                </div>
+              </DialogContent>
+            </Dialog>
 
             <Button
               onClick={() => onDeleteTaskClick(task.id)}

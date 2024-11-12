@@ -9,7 +9,7 @@ import {
 
 import { Button } from "./ui/button";
 
-import data from "./user_data_example.json";
+import data from "../JSONs/user_data_example.json";
 import { FilePenLine, Trash2 } from "lucide-react";
 
 export function TableUsers() {

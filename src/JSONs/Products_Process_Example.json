@@ -1,0 +1,102 @@
+[
+  {
+    "description": "Cadeira Ergonômica Premium",
+    "valorUnitario": 750.00,
+    "processos": ["Montagem", "Inspeção de Qualidade", "Embalagem"]
+  },
+  {
+    "description": "Mesa de Escritório Compacta",
+    "valorUnitario": 580.99,
+    "processos": ["Corte de Madeira", "Montagem", "Polimento", "Embalagem"]
+  },
+  {
+    "description": "Notebook Gamer X1200",
+    "valorUnitario": 5200.00,
+    "processos": ["Montagem", "Testes de Desempenho", "Instalação de Software", "Embalagem"]
+  },
+  {
+    "description": "Smartphone Edge Pro",
+    "valorUnitario": 3999.90,
+    "processos": ["Montagem de Componentes", "Testes de Funcionalidade", "Ajuste de Câmera", "Embalagem"]
+  },
+  {
+    "description": "Fone de Ouvido Bluetooth Bass+",
+    "valorUnitario": 299.99,
+    "processos": ["Montagem", "Teste de Som", "Carregamento Inicial", "Embalagem"]
+  },
+  {
+    "description": "Caneca Térmica de Inox",
+    "valorUnitario": 45.00,
+    "processos": ["Molde", "Polimento", "Pintura", "Inspeção de Qualidade"]
+  },
+  {
+    "description": "Cafeteira Automática Slim",
+    "valorUnitario": 349.00,
+    "processos": ["Montagem", "Teste de Aquecimento", "Embalagem"]
+  },
+  {
+    "description": "Teclado Mecânico RGB",
+    "valorUnitario": 420.00,
+    "processos": ["Montagem de Teclas", "Teste de Iluminação", "Embalagem"]
+  },
+  {
+    "description": "Monitor 4K Ultra HD 27''",
+    "valorUnitario": 1899.90,
+    "processos": ["Montagem", "Teste de Resolução", "Calibração de Cores", "Embalagem"]
+  },
+  {
+    "description": "Headset Gamer Surround",
+    "valorUnitario": 529.90,
+    "processos": ["Montagem", "Teste de Som 3D", "Carregamento Inicial", "Embalagem"]
+  },
+  {
+    "description": "Aspirador de Pó RoboClean",
+    "valorUnitario": 1500.00,
+    "processos": ["Montagem", "Teste de Sução", "Instalação de Firmware", "Embalagem"]
+  },
+  {
+    "description": "Mousepad Gamer Extra Grande",
+    "valorUnitario": 85.90,
+    "processos": ["Corte de Material", "Costura", "Inspeção de Qualidade"]
+  },
+  {
+    "description": "Kit de Ferramentas Completo",
+    "valorUnitario": 299.00,
+    "processos": ["Montagem", "Inspeção de Segurança", "Embalagem"]
+  },
+  {
+    "description": "Bicicleta Dobrável Urbana",
+    "valorUnitario": 1200.00,
+    "processos": ["Soldagem", "Montagem", "Inspeção de Qualidade", "Embalagem"]
+  },
+  {
+    "description": "Chuveiro Elétrico Turbo",
+    "valorUnitario": 199.00,
+    "processos": ["Montagem", "Teste de Aquecimento", "Teste de Pressão", "Embalagem"]
+  },
+  {
+    "description": "Tablet 10'' Wi-Fi 64GB",
+    "valorUnitario": 1399.90,
+    "processos": ["Montagem", "Teste de Tela", "Instalação de Software", "Embalagem"]
+  },
+  {
+    "description": "Smartwatch Sport Fit",
+    "valorUnitario": 699.90,
+    "processos": ["Montagem", "Teste de Sensores", "Calibração de Display", "Embalagem"]
+  },
+  {
+    "description": "Câmera de Segurança Full HD",
+    "valorUnitario": 299.00,
+    "processos": ["Montagem de Lentes", "Teste de Visão Noturna", "Embalagem"]
+  },
+  {
+    "description": "Geladeira Frost Free 400L",
+    "valorUnitario": 3999.00,
+    "processos": ["Montagem", "Teste de Refrigeração", "Inspeção de Qualidade", "Embalagem"]
+  },
+  {
+    "description": "Fogão 4 Bocas com Grill",
+    "valorUnitario": 950.00,
+    "processos": ["Montagem", "Teste de Queimadores", "Inspeção de Segurança", "Embalagem"]
+  }
+]

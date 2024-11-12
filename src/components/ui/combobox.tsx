@@ -37,12 +37,12 @@ export function ComboboxDemo<T extends object>({ data, displayKey, onSelectionCh
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="justify-between capitalize w-full"
+          className="capitalize w-full relative flex flex-col text-xs text-left pl-2 items-start font-medium"
         >
           {value
             ? data.find((item) => item[displayKey] === value)?.[displayKey] as string
             : `Selecione ${String(displayKey)}...`}
-          <ChevronsUpDown className="opacity-50" />
+          <ChevronsUpDown className="opacity-50 absolute right-1" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">

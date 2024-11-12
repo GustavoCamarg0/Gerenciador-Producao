@@ -37,6 +37,7 @@ export function Users() {
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="p-0 w-96 top-[40%]">
+                    <DialogTitle hidden></DialogTitle>
                     <UserForm />
                   </DialogContent>
                 </Dialog>
