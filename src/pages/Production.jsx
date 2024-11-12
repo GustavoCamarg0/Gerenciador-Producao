@@ -4,16 +4,18 @@ import { Sidebar } from "../components/Sidebar";
 import { ComboboxDemo } from "../components/ui/combobox";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
-import data from "../JSONs/data_example.json";
 import { useState } from "react";
 
-export function AddProduction() {
-  const [Price, setPrice] = useState(null);
+export function Production() {
+  const [Price, setPrice] = useState(0); // Inicializa como 0
   const [Amount, setAmount] = useState(0);
+
+  const products = JSON.parse(localStorage.getItem("products")) || [];
 
   const setAmountHandle = (e) => {
     const amount = parseInt(e.target.value, 10);
-    if (Price && !isNaN(amount)) {
+    if (!isNaN(amount) && Price > 0) {
+      // Verifica se o preço é válido e maior que zero
       setAmount(amount * Price);
     } else {
       setAmount(0);
@@ -21,8 +23,15 @@ export function AddProduction() {
   };
 
   const setPriceSelect = (price) => {
-    if (price && price.valorUnidade) {
-      setPrice(price.valorUnidade);
+    console.log(price);
+    if (price && price.unitPrice) {
+      // Converte price.unitPrice para número, caso venha como string
+      const priceValue = parseFloat(price.unitPrice);
+      if (!isNaN(priceValue)) {
+        setPrice(priceValue);
+      } else {
+        setPrice(0); // Se a conversão falhar, define como 0
+      }
     }
   };
 
@@ -45,8 +54,8 @@ export function AddProduction() {
                 <div className="w-56">
                   <span>Escolha o Produto:</span>
                   <ComboboxDemo
-                    data={data}
-                    displayKey="produto"
+                    data={products}
+                    displayKey="description"
                     onSelectionChange={setPriceSelect}
                   />
                 </div>
@@ -54,7 +63,9 @@ export function AddProduction() {
                   <span>Valor Unitário:</span>
                   <Input
                     type="text"
-                    value={Price ? `R$ ${Price.toFixed(2)}` : "Valor Unitário"}
+                    value={
+                      Price > 0 ? `R$ ${Price.toFixed(2)}` : "Valor Unitário"
+                    } // Exibe o valor apenas se for maior que 0
                     className="w-full  bg-gray-300"
                     disabled
                   />
@@ -93,7 +104,9 @@ export function AddProduction() {
                 </div>
               </div>
 
-              <Button className="bg-blue-800 w-[20%] mb-2 hover:bg-blue-800/80">Salvar</Button>
+              <Button className="bg-blue-800 w-[20%] mb-2 hover:bg-blue-800/80">
+                Salvar
+              </Button>
             </div>
           </div>
           <Footer />

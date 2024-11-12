@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function AddTask({ onAddTaskSubmit }) {
+export function AddProduct({ onAddProductSubmit }) {
   const [description, setDescription] = useState("");
   const [unitPrice, setUnitPrice] = useState("");
 
@@ -15,7 +15,7 @@ function AddTask({ onAddTaskSubmit }) {
       return;
     }
 
-    onAddTaskSubmit(description, unitPrice);
+    onAddProductSubmit(description, unitPrice,[]);
     toast.success("Produto adicionado com sucesso!");
     setDescription("");
     setUnitPrice("");
@@ -74,4 +74,3 @@ function AddTask({ onAddTaskSubmit }) {
   );
 }
 
-export default AddTask;

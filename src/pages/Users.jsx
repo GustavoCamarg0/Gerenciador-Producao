@@ -30,7 +30,7 @@ export function Users() {
               <div className="bg-white w-full h-[50px] flex gap-2 items-center pl-3 pr-6 rounded-t-md">
                 <h1 className="text-lg font-medium">Lista de Usuarios</h1>
                 <Dialog>
-                  <DialogTrigger>
+                  <DialogTrigger asChild>
                     <Button className="bg-blue-800 hover:bg-blue-800/80">
                       <Plus />
                       Adicionar Usuario

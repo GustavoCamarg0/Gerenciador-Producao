@@ -4,9 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./pages/Dashboard.jsx";
 import { LoginPage } from "./pages/LoginPage.jsx";
 import { Users } from "./pages/Users.jsx";
-import { AddProcess } from "./pages/AddProcess.jsx";
-import { AddProduction } from "./pages/AddProduction.jsx";
-import { AddProduct } from "./pages/AddProduct.jsx";
+import { Process } from "./pages/Process.jsx";
+import { Production } from "./pages/Production.jsx";
+import { Product } from "./pages/Product.jsx";
 import {DashProduct} from "./pages/DashProduct.jsx";
 
 import "./index.css";
@@ -21,15 +21,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/product",
-    element: <AddProduct />,
+    element: <Product />,
   },
   {
     path: "/process",
-    element: <AddProcess />,
+    element: <Process />,
   },
   {
     path: "/production",
-    element: <AddProduction />,
+    element: <Production />,
   },
   {
     path: "/users",

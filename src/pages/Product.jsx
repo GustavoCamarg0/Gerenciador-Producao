@@ -1,34 +1,33 @@
 import { useEffect, useState } from "react";
-import AddTask from "../components/AddTask";
-import Tasks from "../components/Tasks";
+import {AddProduct} from "../components/AddProduct";
+import Products from "../components/Products";
 import { Sidebar } from "../components/Sidebar";
 import Footer from "../components/Footer";
 import { Header } from "../components/Header";
-
 import data from "../JSONs/Products_Process_Example.json"
 
-export function AddProduct() {
-  const [tasks, setTasks] = useState(
-    JSON.parse(localStorage.getItem("tasks")) || []
+export function Product() {
+  const [products, setproducts] = useState(
+    JSON.parse(localStorage.getItem("products")) || []
   );
 
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
+    localStorage.setItem("products", JSON.stringify(products));
+  }, [products]);
 
-  function onDeleteTaskClick(taskId) {
-    const newTasks = tasks.filter((task) => task.id != taskId);
-    setTasks(newTasks);
+  function onDeleteProductClick(productID) {
+    const newproducts = products.filter((products) => products.id != productID);
+    setproducts(newproducts);
   }
 
-  function onAddTaskSubmit(description, unitPrice) {
+  function onAddProductSubmit(description, unitPrice) {
     const newTask = {
-      id: tasks.length + 1,
+      id: products.length + 1,
       description,
       unitPrice,
-      isCompleted: false,
+      processes: [],
     };
-    setTasks([...tasks, newTask]);
+    setproducts([...products, newTask]);
   }
 
   return (
@@ -42,12 +41,12 @@ export function AddProduct() {
             Home <span className="text-gray-400">/ Cadastro de Produto</span>
           </span>
           <div className="h-full bg-gray-200 w-full flex flex-col items-center">
-            <AddTask onAddTaskSubmit={onAddTaskSubmit} />
+            <AddProduct onAddProductSubmit={onAddProductSubmit} />
             <hr />
-            {tasks.length > 0 ? (
-              <Tasks
-                tasks={tasks}
-                onDeleteTaskClick={onDeleteTaskClick}
+            {products.length > 0 ? (
+              <Products
+                products={products}
+                onDeleteProductClick={onDeleteProductClick}
               />
             ) : null}
           </div>
