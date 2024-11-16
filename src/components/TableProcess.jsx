@@ -14,24 +14,30 @@ export function TableProcess({ processos }) {
     <div>
       <Table className="border">
         <TableHeader>
-          <TableRow className="bg-gray-300/90  hover:bg-gray-300/90">
-            <TableHead>Processo</TableHead>
-            <TableHead>Valor</TableHead>
-            <TableHead>Opções</TableHead>
+          <TableRow className="bg-gray-300/90  hover:bg-gray-300/90 ">
+            <TableHead className="dark:text-black">Processo</TableHead>
+            <TableHead className="dark:text-black">Valor</TableHead>
+            <TableHead className="dark:text-black">Opções</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          {processos.map((item, index) => (
-            <TableRow key={index}>
-              <TableCell>{item}</TableCell>
-              <TableCell>valor</TableCell>
-              <TableCell>
-                <Button variant={"destructive"}>
-                  <Trash2 />
-                </Button>
-              </TableCell>
+          {processos.length > 0 ? (
+            processos.map((item, index) => (
+              <TableRow key={index}>
+                <TableCell>{item}</TableCell>
+                <TableCell>valor</TableCell>
+                <TableCell>
+                  <Button  variant="destructive">
+                    <Trash2 />
+                  </Button>
+                </TableCell>
+              </TableRow>
+            ))
+          ) : (
+            <TableRow className="flex-1 relative h-[50px]">
+               <TableCell className="absolute left-48 top-1 text-lg text-gray-400">N/A</TableCell>
             </TableRow>
-          ))}
+          )}
         </TableBody>
       </Table>
     </div>

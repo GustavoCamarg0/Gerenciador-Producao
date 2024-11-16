@@ -13,7 +13,20 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { DialogTitle } from "@radix-ui/react-dialog";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export function Users() {
+
+  function toastAlert(notify){
+   if(notify){
+    toast.success("Usuario Cadastrado com Sucesso.")
+   }else{
+    toast.error("Preencha todos os Campos.")
+   }
+  }
+
   return (
     <div className="h-screen flex flex-col ">
       <div className="flex flex-1">
@@ -21,24 +34,24 @@ export function Users() {
         <main className="flex-1 flex flex-col">
           <Header />
           <hr />
-          <span className="w-full p-1 pl-4">
+          <span className="w-full p-1 pl-4 dark:bg-gray-900">
             Home <span className="text-gray-400">/ Users</span>
           </span>
           <hr />
-          <div className="h-full bg-gray-200 w-full flex justify-center p-8 gap-8">
+          <div className="h-full bg-gray-200 w-full flex justify-center p-8 gap-8 dark:bg-gray-800">
             <div className="flex-1">
-              <div className="bg-white w-full h-[50px] flex gap-2 items-center pl-3 pr-6 rounded-t-md">
+              <div className="bg-white w-full h-[50px] flex gap-2 items-center pl-3 pr-6 rounded-t-md dark:bg-gray-900">
                 <h1 className="text-lg font-medium">Lista de Usuarios</h1>
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button className="bg-blue-800 hover:bg-blue-800/80">
+                    <Button className="bg-blue-800 hover:bg-blue-800/80 text-white">
                       <Plus />
                       Adicionar Usuario
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="p-0 w-96 top-[40%]">
                     <DialogTitle hidden></DialogTitle>
-                    <UserForm />
+                    <UserForm toast={toastAlert}/>
                   </DialogContent>
                 </Dialog>
 
@@ -57,6 +70,7 @@ export function Users() {
               <hr />
 
               <TableUsers />
+              <ToastContainer autoClose={2000} theme="colored" hideProgressBar />
             </div>
           </div>
           <Footer />

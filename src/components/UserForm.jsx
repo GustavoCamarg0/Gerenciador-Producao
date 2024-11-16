@@ -1,8 +1,13 @@
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-export function UserForm() {
+
+export function UserForm({toast}) {
+  const TesteClick = () => {
+    toast(true)
+  };
+
   return (
-    <div className="p-0 flex flex-col gap-2 text-sm">
+    <div className="p-0 flex flex-col gap-2 text-sm dark:bg-gray-900">
       <div className="p-2 text-lg text-gray-500">
         <h1> Adicionar Novo Usuário</h1>
       </div>
@@ -37,7 +42,12 @@ export function UserForm() {
       <hr />
 
       <div className="w-full flex justify-end p-2">
-        <Button className="bg-blue-800 hover:bg-blue-800/80">Salvar</Button>
+        <Button
+          className="bg-blue-800 hover:bg-blue-800/80 text-white"
+          onClick={TesteClick}
+        >
+          Salvar
+        </Button>
       </div>
     </div>
   );

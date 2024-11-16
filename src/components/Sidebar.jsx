@@ -19,23 +19,23 @@ export function Sidebar() {
     <aside
       className={`border-r ${
         isClose ? "w-52" : "w-16 close"
-      } flex flex-col transition-all ease-in-out duration-300 bg-white`}
+      } flex flex-col transition-all ease-in-out duration-300 bg-white dark:bg-gray-900 `}
     >
       <div className="flex-1 p-3">
         <div className="flex gap-3 items-center">
           <span className="font-bold underline flex justify-center w-full text-2xl ">
-            <p className="text-[#363949]">Vip</p>
+            <p className="text-[#363949] dark:text-white">Vip</p>
             <p className="text-sky-400 ">Plast</p>
           </span>
           <Menu className="cursor-pointer menu" onClick={toggleSidebar} />
         </div>
 
-        <ul className="flex flex-col gap-2 mt-12 w-full text-blue-500 pl-2 text-sm">
+        <ul className="flex flex-col gap-2 mt-12 w-full pl-2 text-sm ">
           <Link to="/home">
-            <li className="flex gap-2 cursor-pointer">
+            <li className="flex gap-2 cursor-pointer ">
               <LayoutDashboard size={20} className="text-blue-500"/>
 
-              <span>Dashboard</span>
+              <span className="dark:text-white">Dashboard</span>
             </li>
           </Link>
           <hr className="mt-[10%]" />
@@ -43,7 +43,7 @@ export function Sidebar() {
             <li className="flex gap-2 cursor-pointer">
               <DiamondPlus size={20} className="text-amber-500" />
 
-              <span>Cadastro de Produto</span>
+              <span className="dark:text-white">Cadastro de Produto</span>
             </li>
           </Link>
           <hr className="mt-[10%]" />
@@ -52,7 +52,7 @@ export function Sidebar() {
             <li className="flex gap-2 cursor-pointer">
               <GitCompareArrows size={20} className="text-purple-500" />
 
-              <span>Cadastro de Processo</span>
+              <span className="dark:text-white">Cadastro de Processo</span>
             </li>
           </Link>
 
@@ -61,7 +61,7 @@ export function Sidebar() {
           <Link to="/production">
             <li className="flex gap-2 cursor-pointer">
               <RefreshCcwDot size={20} className="text-emerald-500" />
-              <span>Cadastro de Produção</span>
+              <span className="dark:text-white">Cadastro de Produção</span>
             </li>
           </Link>
 
@@ -70,7 +70,7 @@ export function Sidebar() {
           <Link to="/dashproduct">
             <li className="flex gap-2 cursor-pointer">
               <Grid2x2Check size={20} className="text-slate-500" />
-              <span>Produção</span>
+              <span className="dark:text-white">Produção</span>
             </li>
           </Link>
         </ul>

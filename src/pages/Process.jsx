@@ -15,17 +15,17 @@ export function Process() {
         <main className="flex-1 flex flex-col">
           <Header />
           <hr />
-          <span className="w-full p-1 pl-4">
+          <span className="w-full p-1 pl-4 dark:bg-gray-900">
             Home <span className="text-gray-400">/ Cadastro de Processos</span>
           </span>
           <hr />
-          <div className="h-full bg-gray-200 w-full flex flex-col items-center">
-            <div className="bg-white w-[60%] p-4 flex justify-center mt-4 rounded-md">
+          <div className="h-full bg-gray-200 w-full flex flex-col items-center dark:bg-gray-800">
+            <div className="bg-white w-[60%] p-4 flex justify-center mt-4 rounded-md dark:bg-gray-900">
               <div className="w-[30%] flex flex-col items-center gap-2">
                 <ComboboxDemo data={products} displayKey="description" />
                 <Input placeholder="Nome do Processo" />
                 <Input placeholder="Valor a ser pago" />
-                <Button className="bg-blue-800 hover:bg-blue-800/80">
+                <Button className="bg-blue-800 hover:bg-blue-800/80 text-white">
                   Salvar
                 </Button>
               </div>

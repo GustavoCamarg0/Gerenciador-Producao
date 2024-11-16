@@ -19,10 +19,10 @@ export function TableUsers() {
   `;
   
   return (
-    <div className={`bg-white h-full overflow-auto p-2 rounded-b-md  ${resolutions}`}>
+    <div className={`bg-white h-full overflow-auto p-2 rounded-b-md  ${resolutions} dark:bg-gray-900`}>
       <Table className="border">
         <TableHeader>
-          <TableRow className="bg-gray-300/90  hover:bg-gray-300/90">
+          <TableRow className="bg-gray-300/90  hover:bg-gray-300/90 dark:bg-gray-800">
             <TableHead>Nome</TableHead>
             <TableHead>CPF</TableHead>
             <TableHead>Login</TableHead>
@@ -37,8 +37,8 @@ export function TableUsers() {
               <TableCell>{item.login}</TableCell>
               <TableCell>
                 <div className="flex gap-2">
-                  <Button className="bg-emerald-500 hover:bg-emerald-500/80"><FilePenLine /></Button>
-                  <Button variant={"destructive"}><Trash2 /></Button>
+                  <Button className="bg-emerald-500 hover:bg-emerald-500/80 text-white"><FilePenLine /></Button>
+                  <Button  variant="destructive"><Trash2 /></Button>
                 </div>
               </TableCell>
             </TableRow>

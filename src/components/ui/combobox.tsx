@@ -37,16 +37,16 @@ export function ComboboxDemo<T extends object>({ data, displayKey, onSelectionCh
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="capitalize w-full relative flex flex-col text-xs text-left pl-2 items-start font-medium"
+          className="capitalize w-full relative flex flex-col text-xs text-left pl-2 items-start font-medium dark:bg-gray-900"
         >
           {value
             ? data.find((item) => item[displayKey] === value)?.[displayKey] as string
             : `Selecione ${String(displayKey)}...`}
-          <ChevronsUpDown className="opacity-50 absolute right-1" />
+          <ChevronsUpDown className="opacity-50 absolute right-1 " />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[200px] p-0">
-        <Command>
+      <PopoverContent className="w-[200px] p-0 ">
+        <Command className="dark:bg-gray-900">
           <CommandInput placeholder="Search..." />
           <CommandList>
             <CommandEmpty>No option found.</CommandEmpty>

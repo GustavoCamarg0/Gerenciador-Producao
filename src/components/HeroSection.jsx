@@ -4,7 +4,7 @@ import { Card } from "./Card";
 
 function HeroSection() {
   return (
-    <div className="bg-white w-[90%] h-36 mt-3 rounded-md flex flex-col relative">
+    <div className="bg-white w-[90%] h-36 mt-3 rounded-md flex flex-col relative dark:bg-gray-900">
       <h1 className="w-full p-1 pl-2 text-gray-500 font-normal">Overview</h1>
       <hr />
 

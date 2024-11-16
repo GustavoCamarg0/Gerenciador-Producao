@@ -17,7 +17,7 @@ export function TableContent() {
   `;
   return (
     <div
-      className={`bg-white w-[90%] flex-1 h-full overflow-auto ${resolutions}`}
+      className={`bg-white w-[90%] flex-1 h-full overflow-auto ${resolutions} dark:bg-gray-900`}
     >
       <Table>
         <TableHeader>

@@ -13,11 +13,11 @@ function PrincipalPage() {
         <main className="flex-1 flex flex-col">
           <Header />
           <hr />
-          <span className="w-full p-1 pl-4">
+          <span className="w-full p-1 pl-4 dark:bg-gray-900">
             Home <span className="text-gray-400">/ Dashboard</span>
           </span>
-          <hr />
-          <div className="h-full bg-gray-200 w-full flex flex-col items-center gap-3 pb-3">
+          <hr/>
+          <div className="h-full bg-gray-200 w-full flex flex-col items-center gap-3 pb-3 dark:bg-gray-800">
             <HeroSection />
             <TableContent />
           </div>

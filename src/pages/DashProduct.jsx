@@ -10,11 +10,11 @@ export function DashProduct() {
         <main className="flex-1 flex flex-col">
           <Header />
           <hr />
-          <span className="w-full p-1 pl-4">
+          <span className="w-full p-1 pl-4 dark:bg-gray-900">
             Home <span className="text-gray-400">/ Produção</span>
           </span>
           <hr />
-          <div className="h-full bg-gray-200 w-full flex flex-col items-center"></div>
+          <div className="h-full bg-gray-200 w-full flex flex-col items-center dark:bg-gray-800"></div>
           <Footer />
         </main>
       </div>

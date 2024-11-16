@@ -22,7 +22,7 @@ export function AddProduct({ onAddProductSubmit }) {
   };
 
   return (
-    <div className="w-[80%] flex p-2 px-4 justify-center items-end bg-white mt-3 rounded-t-md">
+    <div className="w-[80%] flex p-2 px-4 justify-center items-end bg-white mt-3 rounded-t-md dark:bg-gray-900">
       <div className="flex gap-2 w-full justify-start items-end text-xs">
         <div className="flex flex-col gap-1">
           <p className="font-medium underline">Descrição:</p>
@@ -46,7 +46,7 @@ export function AddProduct({ onAddProductSubmit }) {
           />
         </div>
         <Button
-          className="w-24  bg-blue-800 hover:bg-blue-800/90"
+          className="w-24  bg-blue-800 hover:bg-blue-800/90 dark:text-white"
           onClick={handleSaveClick}
         >
           Salvar

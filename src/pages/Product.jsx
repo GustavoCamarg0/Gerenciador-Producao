@@ -12,7 +12,8 @@ export function Product() {
   );
 
   useEffect(() => {
-    localStorage.setItem("products", JSON.stringify(products));
+    localStorage.setItem("products", JSON.stringify(data));
+
   }, [products]);
 
   function onDeleteProductClick(productID) {
@@ -37,10 +38,10 @@ export function Product() {
         <main className="flex-1 flex flex-col">
           <Header />
           <hr />
-          <span className="w-full p-1 pl-4">
+          <span className="w-full p-1 pl-4 dark:bg-gray-900">
             Home <span className="text-gray-400">/ Cadastro de Produto</span>
           </span>
-          <div className="h-full bg-gray-200 w-full flex flex-col items-center">
+          <div className="h-full bg-gray-200 w-full flex flex-col items-center dark:bg-gray-800">
             <AddProduct onAddProductSubmit={onAddProductSubmit} />
             <hr />
             {products.length > 0 ? (

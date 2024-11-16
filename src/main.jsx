@@ -7,7 +7,8 @@ import { Users } from "./pages/Users.jsx";
 import { Process } from "./pages/Process.jsx";
 import { Production } from "./pages/Production.jsx";
 import { Product } from "./pages/Product.jsx";
-import {DashProduct} from "./pages/DashProduct.jsx";
+import { DashProduct } from "./pages/DashProduct.jsx";
+import { ThemeProvider } from "./components/ui/theme-provider.tsx";
 
 import "./index.css";
 const router = createBrowserRouter([
@@ -38,11 +39,13 @@ const router = createBrowserRouter([
   {
     path: "/dashproduct",
     element: <DashProduct />,
-  }
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>
 );

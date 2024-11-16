@@ -12,6 +12,7 @@ export function Production() {
 
   const products = JSON.parse(localStorage.getItem("products")) || [];
 
+
   const setAmountHandle = (e) => {
     const amount = parseInt(e.target.value, 10);
     if (!isNaN(amount) && Price > 0) {
@@ -24,6 +25,7 @@ export function Production() {
 
   const setPriceSelect = (price) => {
     console.log(price);
+    console.log(products)
     if (price && price.unitPrice) {
       // Converte price.unitPrice para número, caso venha como string
       const priceValue = parseFloat(price.unitPrice);
@@ -43,13 +45,13 @@ export function Production() {
           <Header />
           <hr />
 
-          <span className="w-full p-1 pl-4">
-            Home <span className="text-gray-400">/ Cadastro de Produção</span>
+          <span className="w-full p-1 pl-4 dark:bg-gray-900">
+            Home <span className="text-gray-400 ">/ Cadastro de Produção</span>
           </span>
           <hr />
 
-          <div className="h-full bg-gray-200 w-full flex flex-col items-center">
-            <div className="bg-white w-[55%] flex flex-col mt-5 rounded-md gap-5 items-center text-sm">
+          <div className="h-full bg-gray-200 w-full flex flex-col items-center dark:bg-gray-800">
+            <div className="bg-white w-[55%] flex flex-col mt-5 rounded-md gap-5 items-center text-sm dark:bg-gray-900">
               <div className="flex w-full gap-5 justify-center mt-5">
                 <div className="w-56">
                   <span>Escolha o Produto:</span>
@@ -66,7 +68,7 @@ export function Production() {
                     value={
                       Price > 0 ? `R$ ${Price.toFixed(2)}` : "Valor Unitário"
                     } // Exibe o valor apenas se for maior que 0
-                    className="w-full  bg-gray-300"
+                    className="w-full  bg-gray-300 dark:bg-gray-800"
                     disabled
                   />
                 </div>
@@ -86,7 +88,7 @@ export function Production() {
                   <span>Valor Total:</span>
                   <Input
                     type="text"
-                    className="w-full bg-gray-300"
+                    className="w-full bg-gray-300 dark:bg-gray-800"
                     disabled
                     value={`R$ ${Amount.toFixed(2)}`}
                   />
@@ -104,7 +106,7 @@ export function Production() {
                 </div>
               </div>
 
-              <Button className="bg-blue-800 w-[20%] mb-2 hover:bg-blue-800/80">
+              <Button className="bg-blue-800 w-[20%] mb-2 hover:bg-blue-800/80 text-white">
                 Salvar
               </Button>
             </div>
