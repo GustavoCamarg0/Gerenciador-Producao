@@ -11,13 +11,17 @@ export function Header() {
       </div>
 
       <div className="flex gap-2 items-center absolute  right-4">
-        <ModeToggle />
-        <Button variant="ghost" size="icon">
-          <Bell />
-        </Button>
-        <Button variant="ghost" size="icon">
-          <List />
-        </Button>
+        <div className="flex rounded p-1 gap-1 border">
+          <ModeToggle />
+          <div class="w-[1px]  bg-gray-300"></div>
+          <Button variant="ghost" size="icon" className="h-6 w-6">
+            <Bell />
+          </Button>
+          <div class="w-[1px] bg-gray-300"></div>
+          <Button variant="ghost" size="icon" className="h-6 w-6">
+            <List />
+          </Button>
+        </div>
 
         <div className="w-[30px] h-[30px] flex justify-center items-center">
           <Avatar>
