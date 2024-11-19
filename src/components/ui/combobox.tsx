@@ -26,7 +26,11 @@ interface ComboboxDemoProps<T> {
   onSelectionChange?: (selectedItem: T | null) => void; // Função de callback para mudança de seleção
 }
 
-export function ComboboxDemo<T extends object>({ data, displayKey, onSelectionChange }: ComboboxDemoProps<T>) {
+export function ComboboxDemo<T extends object>({
+  data,
+  displayKey,
+  onSelectionChange,
+}: ComboboxDemoProps<T>) {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
 
@@ -40,7 +44,9 @@ export function ComboboxDemo<T extends object>({ data, displayKey, onSelectionCh
           className="capitalize w-full relative flex flex-col text-xs text-left pl-2 items-start font-medium dark:bg-gray-900"
         >
           {value
-            ? data.find((item) => item[displayKey] === value)?.[displayKey] as string
+            ? (data.find((item) => item[displayKey] === value)?.[
+                displayKey
+              ] as string)
             : `Selecione ${String(displayKey)}...`}
           <ChevronsUpDown className="opacity-50 absolute right-1 " />
         </Button>
@@ -58,10 +64,12 @@ export function ComboboxDemo<T extends object>({ data, displayKey, onSelectionCh
                   onSelect={(currentValue) => {
                     setValue(currentValue === value ? "" : currentValue);
                     setOpen(false);
-                    
+
                     if (onSelectionChange) {
-                      const selectedItem = data.find((i) => i[displayKey] === currentValue) || null;
-                      onSelectionChange(selectedItem); 
+                      const selectedItem =
+                        data.find((i) => i[displayKey] === currentValue) ||
+                        null;
+                      onSelectionChange(selectedItem);
                     }
                   }}
                 >
@@ -70,6 +78,76 @@ export function ComboboxDemo<T extends object>({ data, displayKey, onSelectionCh
                     className={cn(
                       "ml-auto",
                       value === item[displayKey] ? "opacity-100" : "opacity-0"
+                    )}
+                  />
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          </CommandList>
+        </Command>
+      </PopoverContent>
+    </Popover>
+  );
+}
+
+export function ComboboxPlace() {
+  const [open, setOpen] = React.useState(false);
+  const [value, setValue] = React.useState("");
+  const place = [
+    {
+      label: "Primeiro",
+      value: "1",
+    },
+    {
+      label: "Segundo",
+      value: "2",
+    },
+    {
+      label: "Terceiro",
+      value: "3",
+    },
+    {
+      label: "Quarto",
+      value: "4",
+    },
+    {
+      label: "Quinto",
+      value: "5",
+    },
+  ];
+  return (
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
+        <Button
+          variant="outline"
+          role="combobox"
+          aria-expanded={open}
+          className="capitalize w-full relative flex flex-col text-xs text-left pl-2 items-start font-medium dark:bg-gray-900"
+        >
+         {value
+            ? place.find((place) => place.value === value)?.label
+            : "Select Place..."}
+          <ChevronsUpDown className="opacity-50 absolute right-1 " />
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-[150px] p-0">
+        <Command className="dark:bg-gray-900">
+          <CommandList>
+            <CommandGroup>
+              {place.map((place) => (
+                <CommandItem
+                  key={place.value}
+                  value={place.value}
+                  onSelect={(currentValue) => {
+                    setValue(currentValue === value ? "" : currentValue);
+                    setOpen(false);
+                  }}
+                >
+                  {place.label}
+                  <Check
+                    className={cn(
+                      "ml-auto",
+                      value === place.value ? "opacity-100" : "opacity-0"
                     )}
                   />
                 </CommandItem>
