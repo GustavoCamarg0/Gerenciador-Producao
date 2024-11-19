@@ -2,12 +2,10 @@ import Footer from "../components/Footer";
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 import { Button } from "../components/ui/button";
-import { ComboboxDemo, ComboboxPlace } from "../components/ui/combobox";
+import { ComboboxProduct, ComboboxPlace } from "../components/ui/combobox";
 import { Input } from "../components/ui/input";
-import { useState } from "react";
 
 export function Process() {
-  const products = JSON.parse(localStorage.getItem("products")) || [];
   return (
     <div className="h-screen flex flex-col ">
       <div className="flex flex-1">
@@ -23,7 +21,7 @@ export function Process() {
             <div className="bg-white w-[60%] p-4 flex justify-center mt-4 rounded-md dark:bg-gray-900">
               <div className="w-full flex flex-col items-center gap-4">
                 <div className="flex  gap-2 w-[80%]">
-                  <ComboboxDemo data={products} displayKey="description"/>
+                  <ComboboxProduct/>
                   <Input placeholder="Nome do Processo" />
                 </div>
                 <div className="flex gap-2 w-[80%]">

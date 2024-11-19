@@ -1,7 +1,7 @@
 import Footer from "../components/Footer";
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
-import { ComboboxDemo } from "../components/ui/combobox";
+import { ComboboxProduct } from "../components/ui/combobox";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
 import { useState } from "react";
@@ -55,7 +55,7 @@ export function Production() {
               <div className="flex w-full gap-5 justify-center mt-5">
                 <div className="w-56">
                   <span>Escolha o Produto:</span>
-                  <ComboboxDemo
+                  <ComboboxProduct
                     data={products}
                     displayKey="description"
                     onSelectionChange={setPriceSelect}
