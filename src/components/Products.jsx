@@ -55,7 +55,7 @@ function Products({ products, onDeleteProductClick }) {
 
             <Button
               onClick={() => onDeleteProductClick(products.id)}
-              variant="destructive"
+              className="bg-red-600 hover:bg-red-500 text-white"
             >
               <TrashIcon />
             </Button>

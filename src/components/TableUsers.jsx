@@ -17,9 +17,11 @@ export function TableUsers() {
   lg:max-h-[350px]
   2xl:max-h-[700px]
   `;
-  
+
   return (
-    <div className={`bg-white h-full overflow-auto p-2 rounded-b-md  ${resolutions} dark:bg-gray-900`}>
+    <div
+      className={`bg-white h-full overflow-auto p-2 rounded-b-md  ${resolutions} dark:bg-gray-900`}
+    >
       <Table className="border">
         <TableHeader>
           <TableRow className="bg-gray-300/90  hover:bg-gray-300/90 dark:bg-gray-800">
@@ -39,8 +41,12 @@ export function TableUsers() {
               <TableCell>{item.tipo}</TableCell>
               <TableCell>
                 <div className="flex gap-2">
-                  <Button className="bg-emerald-500 hover:bg-emerald-500/80 text-white"><FilePenLine /></Button>
-                  <Button  variant="destructive"><Trash2 /></Button>
+                  <Button className="bg-emerald-500 hover:bg-emerald-500/80 text-white">
+                    <FilePenLine />
+                  </Button>
+                  <Button className="bg-red-600 hover:bg-red-500 text-white">
+                    <Trash2 />
+                  </Button>
                 </div>
               </TableCell>
             </TableRow>

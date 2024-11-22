@@ -18,12 +18,35 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-export function ComboboxProduct() {
+interface Product {
+  description: string;
+  unitPrice: string; 
+}
+
+
+export function ComboboxProduct({
+  onSelectionChange,
+}: {
+  onSelectionChange?: (selectedProduct: Product | null) => void;
+}) {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
   const products = JSON.parse(
     localStorage.getItem("products") || "[]"
   ) as Array<any>;
+
+  const handleSelect = (currentValue:string) => {
+    const selectedProduct = products.find(
+      (product) => product.description === currentValue
+    );
+
+    setValue(currentValue === value ? "" : currentValue); // Atualiza o valor interno
+    setOpen(false);
+
+    if (onSelectionChange && selectedProduct) {
+      onSelectionChange(selectedProduct); // Notifica o componente pai
+    }
+  };
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -51,16 +74,15 @@ export function ComboboxProduct() {
                 <CommandItem
                   key={product.description}
                   value={product.description}
-                  onSelect={(currentValue) => {
-                    setValue(currentValue === value ? "" : currentValue);
-                    setOpen(false);
-                  }}
+                  onSelect={handleSelect}
                 >
                   {product.description}
                   <Check
                     className={cn(
                       "ml-auto",
-                      value === product.value ? "opacity-100" : "opacity-0"
+                      value === product.description
+                        ? "opacity-100"
+                        : "opacity-0"
                     )}
                   />
                 </CommandItem>
@@ -72,6 +94,7 @@ export function ComboboxProduct() {
     </Popover>
   );
 }
+
 
 export function ComboboxPlace() {
   const [open, setOpen] = React.useState(false);

@@ -27,7 +27,7 @@ export function TableProcess({ processos }) {
                 <TableCell>{item}</TableCell>
                 <TableCell>valor</TableCell>
                 <TableCell>
-                  <Button  variant="destructive">
+                  <Button className="bg-red-600 hover:bg-red-500 text-white">
                     <Trash2 />
                   </Button>
                 </TableCell>
@@ -35,7 +35,9 @@ export function TableProcess({ processos }) {
             ))
           ) : (
             <TableRow className="flex-1 relative h-[50px]">
-               <TableCell className="absolute left-48 top-1 text-lg text-gray-400">N/A</TableCell>
+              <TableCell className="absolute left-48 top-1 text-lg text-gray-400">
+                N/A
+              </TableCell>
             </TableRow>
           )}
         </TableBody>

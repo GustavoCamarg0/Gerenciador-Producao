@@ -5,35 +5,25 @@ import { ComboboxProduct } from "../components/ui/combobox";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
 import { useState } from "react";
+import { MoneyInput } from "../components/MoneyInput";
 
 export function Production() {
   const [Price, setPrice] = useState(0); // Inicializa como 0
   const [Amount, setAmount] = useState(0);
 
-  const products = JSON.parse(localStorage.getItem("products")) || [];
-
-
   const setAmountHandle = (e) => {
     const amount = parseInt(e.target.value, 10);
     if (!isNaN(amount) && Price > 0) {
-      // Verifica se o preço é válido e maior que zero
       setAmount(amount * Price);
     } else {
       setAmount(0);
     }
   };
 
-  const setPriceSelect = (price) => {
-    console.log(price);
-    console.log(products)
-    if (price && price.unitPrice) {
-      // Converte price.unitPrice para número, caso venha como string
-      const priceValue = parseFloat(price.unitPrice);
-      if (!isNaN(priceValue)) {
-        setPrice(priceValue);
-      } else {
-        setPrice(0); // Se a conversão falhar, define como 0
-      }
+  const setPriceSelect = (selectedProduct) => {
+    if (selectedProduct && selectedProduct.unitPrice) {
+      const priceValue = parseFloat(selectedProduct.unitPrice);
+      setPrice(isNaN(priceValue) ? 0 : priceValue);
     }
   };
 
@@ -56,20 +46,23 @@ export function Production() {
                 <div className="w-56">
                   <span>Escolha o Produto:</span>
                   <ComboboxProduct
-                    data={products}
-                    displayKey="description"
-                    onSelectionChange={setPriceSelect}
+                    onSelectionChange={(selectedProduct) => {
+                      if (selectedProduct && selectedProduct.unitPrice) {
+                        const priceValue = parseFloat(
+                          selectedProduct.unitPrice
+                        );
+                        setPrice(isNaN(priceValue) ? 0 : priceValue);
+                      }
+                    }}
                   />
                 </div>
                 <div className="w-56">
                   <span>Valor Unitário:</span>
-                  <Input
-                    type="text"
-                    value={
-                      Price > 0 ? `R$ ${Price.toFixed(2)}` : "Valor Unitário"
-                    } // Exibe o valor apenas se for maior que 0
-                    className="w-full  bg-gray-300 dark:bg-gray-800"
+                  <MoneyInput
+                    value={Price}
+                    onChange={setPrice}
                     disabled
+                    classProp="bg-gray-300 dark:bg-gray-800"
                   />
                 </div>
               </div>
@@ -86,11 +79,11 @@ export function Production() {
                 </div>
                 <div className="w-56">
                   <span>Valor Total:</span>
-                  <Input
+                  <MoneyInput
                     type="text"
-                    className="w-full bg-gray-300 dark:bg-gray-800"
+                    classProp="bg-gray-300 dark:bg-gray-800"
                     disabled
-                    value={`R$ ${Amount.toFixed(2)}`}
+                    value={Amount.toFixed(2)}
                   />
                 </div>
               </div>
