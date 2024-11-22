@@ -1,9 +1,10 @@
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
+import { BoxUsersTypes } from "./ui/combobox";
 
-export function UserForm({toast}) {
+export function UserForm({ toast }) {
   const TesteClick = () => {
-    toast(true)
+    toast(true);
   };
 
   return (
@@ -15,10 +16,14 @@ export function UserForm({toast}) {
       <hr />
 
       {/*----------------------------------FORMULARIO---------------------------------- */}
-      <div className="w-full flex flex-col items-center form gap-2 p-1">
+      <div className="w-full flex flex-col items-center form gap-4 p-1">
         <div>
           <span>Nome:</span>
           <Input placeholder="Digite o nome do usuário" />
+        </div>
+        <div>
+          <span>Tipo:</span>
+          <BoxUsersTypes />
         </div>
         <div>
           <span>CPF:</span>

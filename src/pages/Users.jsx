@@ -49,7 +49,7 @@ export function Users() {
                       Adicionar Usuario
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="p-0 w-96 top-[40%]">
+                  <DialogContent className="p-0 w-96 ">
                     <DialogTitle hidden></DialogTitle>
                     <UserForm toast={toastAlert}/>
                   </DialogContent>

@@ -26,6 +26,7 @@ export function TableUsers() {
             <TableHead>Nome</TableHead>
             <TableHead>CPF</TableHead>
             <TableHead>Login</TableHead>
+            <TableHead>Tipo</TableHead>
             <TableHead>Opções</TableHead>
           </TableRow>
         </TableHeader>
@@ -35,6 +36,7 @@ export function TableUsers() {
               <TableCell>{item.nome}</TableCell>
               <TableCell>{item.cpf}</TableCell>
               <TableCell>{item.login}</TableCell>
+              <TableCell>{item.tipo}</TableCell>
               <TableCell>
                 <div className="flex gap-2">
                   <Button className="bg-emerald-500 hover:bg-emerald-500/80 text-white"><FilePenLine /></Button>

@@ -21,7 +21,9 @@ import {
 export function ComboboxProduct() {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
-  const products = JSON.parse(localStorage.getItem("products") || "[]") as Array<any>;
+  const products = JSON.parse(
+    localStorage.getItem("products") || "[]"
+  ) as Array<any>;
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -129,6 +131,68 @@ export function ComboboxPlace() {
                     className={cn(
                       "ml-auto",
                       value === place.value ? "opacity-100" : "opacity-0"
+                    )}
+                  />
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          </CommandList>
+        </Command>
+      </PopoverContent>
+    </Popover>
+  );
+}
+
+export function BoxUsersTypes() {
+  const [open, setOpen] = React.useState(false);
+  const [value, setValue] = React.useState("");
+  const types = [
+    {
+      label: "Admin",
+      value: "Admin",
+    },
+    {
+      label: "Fiscal",
+      value: "Fiscal",
+    },
+    {
+      label: "Observador",
+      value: "Observador",
+    }
+  ];
+  return (
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
+        <Button
+          variant="outline"
+          role="combobox"
+          aria-expanded={open}
+          className="w-full relative flex flex-col text-xs text-left pl-2 items-start font-medium dark:bg-gray-900"
+        >
+          {value
+            ? types.find((types) => types.value === value)?.label
+            : "Selecione o Tipo de Usuário..."}
+          <ChevronsUpDown className="opacity-50 absolute right-1 " />
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-[220px] p-0">
+        <Command className="dark:bg-gray-900">
+          <CommandList>
+            <CommandGroup>
+              {types.map((types) => (
+                <CommandItem
+                  key={types.value}
+                  value={types.value}
+                  onSelect={(currentValue) => {
+                    setValue(currentValue === value ? "" : currentValue);
+                    setOpen(false);
+                  }}
+                >
+                  {types.label}
+                  <Check
+                    className={cn(
+                      "ml-auto",
+                      value === types.value ? "opacity-100" : "opacity-0"
                     )}
                   />
                 </CommandItem>
